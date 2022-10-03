@@ -100,3 +100,7 @@ Nous montrons que G admet une chaine hamiltonienne si et seulement si G' admet u
 "$\Rightarrow$" : Si G admet une chaine hamiltonienne, alors on ajoute 2 arêtes des extrémités de la chaine vers $x_0$ et on obtient un cycle hamiltonien dans $G'$ avec $x_0$ 
 
 Finalement, $p_1$ $\leq$ $p_2$
+
+# Classique en DS 
+TD2 : exo4  variante ${a_k, b_k}$
+et vérifier la parité d'un nombre 
