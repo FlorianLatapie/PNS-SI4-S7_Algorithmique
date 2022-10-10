@@ -8,36 +8,58 @@ Question : existe-t-il un sous-ensemble $E' \subseteq E$ tel que la somme des é
 
 Montrer que Somme de Sous-Ensembles est dans NP en décrivant une machine de Turing non-déterministe.
 
+### Réponse exercice 1
+
+```mermaid
+graph LR
+    a(( )) --> | je choisis e | b(( ))
+    a(( )) --> | je ne choisis pas e | c(( ))
+```
+
+La réponse est donc oui.
+
+* Algorithme de vérificatio d'une solution en temps polynomial
+Somme des éléments en entrée d'une taille $n$, complexité en temps $O(n)$
+
+Le problème est donc NP
+
+---
+
 Soient les problèmes suivants.
 
 Nom : **Chaîneham**
 Instance : Un graphe fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
 Question : Le graphe admet-il une chaîne Hamiltonienne (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?  
 
-Nom : Cycleham 
-Instance : Un graphe fini G = (V, E) représenté sous forme de listes d’adjacence. 
-Question : Le graphe admet-il un cycle Hamiltonien (c’est-à-dire qui passe une et une seule 
-fois par tous les sommets) ?  
-Nom : Cheminham 
-Instance : Un graphe orienté fini G = (V, E) représenté sous forme de listes d’adjacence. 
-Question : Le graphe admet-il un chemin Hamiltonienne (c’est-à-dire qui passe une et une 
-seule fois par tous les sommets) ?  
-Nom : Circuitham 
-Instance : Un graphe orienté fini G = (V, E) représenté sous forme de listes d’adjacence. 
-Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe une et une seule 
-fois par tous les sommets) ? 
- 
-Exercice 2 : 
- 
-1. Cheminham ∝ Circuitham 
-2. Cycleham ∝ Circuitham 
-3. Chaîneham ∝ Cheminham 
-4. Cycleham ∝ Chaîneham 
-5. Circuitham ∝ Cheminham 
-6. Circuitham ∝ Cycleham  
-7. Cheminham ∝ Chaîneham  
- 
- 
+Nom : **Cycleham**
+Instance : Un graphe fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
+Question : Le graphe admet-il un cycle Hamiltonien (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?  
+
+Nom : **Cheminham**
+Instance : Un graphe orienté fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
+Question : Le graphe admet-il un chemin Hamiltonienne (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?  
+
+Nom : **Circuitham**
+Instance : Un graphe orienté fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
+Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
+
+## Exercice 2
+
+1. Cheminham $\propto$ Circuitham
+2. Cycleham $\propto$ Circuitham
+3. Chaîneham $\propto$ Cheminham
+4. Cycleham $\propto$ Chaîneham
+5. Circuitham $\propto$ Cheminham
+6. Circuitham $\propto$ Cycleham  
+7. Cheminham $\propto$ Chaîneham  
+
+
+### Réponse exercice 2
+
+1. 
+
+---
+
 Pour la suite, nous pourrons utiliser la NP-difficulté des problèmes suivants : Cheminham, 
 Circuitham, Cycleham, Chaîneham, Clique, Partition, 3-Dimensional Matching, X3-SAT. 
  
