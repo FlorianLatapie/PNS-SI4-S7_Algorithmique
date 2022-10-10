@@ -2,7 +2,7 @@
 
 ## Exercice 1
 
-Décrire  de  manière  détaillée  une  machine  de  Turing  déterministe  à  un  seul  ruban  qui
+Décrire de manière détaillée une machine de Turing déterministe à un seul ruban qui
 reconnaît le langage des mots composés d’un nombre en binaire qui contient exactement un
 0 et qui n’est ni en première ni en dernière position.
 Exemples de mots du langage : 11011111 ; 101111111 ; 11111101 ; 101
@@ -78,10 +78,10 @@ graph TB
 
 ## Exercice 3
 
-Nous considérons le problème du calcul de la longueur en binaire d’un mot sur l’alphabet {a,b}
+Nous considérons le problème du calcul de la longueur en binaire d’un mot sur l’alphabet {a, b}
 donné en entrée.
 
-- Décrire  une  machine  de  Turing  à  deux  rubans  qui  effectue  le  calcul  et  évaluer  sa
+- Décrire une machine de Turing à deux rubans qui effectue le calcul et évaluer sa
 complexité.
 - Même question avec un seul ruban.
 - Comment améliorer la complexité de votre machine précédente (à un seul ruban) afin
@@ -160,7 +160,7 @@ graph TB
 ## Exercice 7
 
 Décrire de manière détaillée une machine de Turing déterministe à un seul ruban qui trie les
-lettres d’un mot écrit sur l’alphabet {x,y}.
+lettres d’un mot écrit sur l’alphabet {x, y}.
 Exemple : si le mot est xyxxy alors le résultat sera xxxyy
 
 Même question avec l’alphabet {x,y,z}.

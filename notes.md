@@ -16,7 +16,7 @@ Machine de Turing (1936) - Modèle de calcul
 Composition d'une machine de Turing :
 
 - Une ou plusieurs bandes/ruban
-- Une unité de controle
+- Une unité de contrôle
 - Chaque bande est divisée en cases
 - Chaque case contient un symbole d'un alphabet fini
 - Tetes de lecture/écriture permet de lire/écrire dans une case
@@ -45,17 +45,17 @@ T(n) nombre maximum de transitions pour une donnée de taille n
 
 ## Théorème
 
-Si le language `L` est accepté par une machine de Turing `T` à `k` bandes alors il existe une machine de Turing `T'` à 1 bande qui reconnaît le même language `L`.
+Si le langage `L` est accepté par une machine de Turing `T` à `k` bandes alors il existe une machine de Turing `T'` à 1 bande qui reconnaît le même langage `L`.
 
 ###  Théorème de l'accélération
 
-Si L est accepté par une machine de turing a bande (`k>1`) en un temps `T(n)` (avec $\lim\limits_{x \to \infty} \frac{T(n)}{n} = +\infty$) alors pour toute coustante réelle `c>0`, il existe une machine de turing à `k` bandes acceptant `L` en un temps `c T(n)`
+Si L est accepté par une machine de turing à bande (`k>1`) en un temps `T(n)` (avec $\lim\limits_{x \to \infty} \frac{T(n)}{n} = +\infty$) alors pour toute constante réelle `c>0`, il existe une machine de turing à `k` bandes acceptant `L` en un temps `c T(n)`
 
 ### Preuve
 
 1. Nous encodons de la manière suivante les cases de MT $\longrightarrow$ 1 case de MT
 2. Ce codage permet plusieurs transitions à la fois.
-En effet, unel ecture donne l'information de `n` cases de MT.
+En effet, une lecture donne l'information de `n` cases de MT.
 Donc on peut effectuer tout le travail de ces `n` lectures.
 Chaque phase de base de `MT' >= m` transitions de `MT`
 Pour MT', on va lire 3 cases voisines ($3^m$ cases dans MT)  
@@ -78,11 +78,11 @@ pour `n` suffisamment grand.
 - Nom : Sac a dos (Knapsack)
 - Données :
   - ensemble fini d'objets $E$
-  - une fonction entière $v$ qui associe une valeur a chaque objet
-  - une fonction entière $p$ qui associe un poids a chaque objet
+  - une fonction entière $v$ qui associe une valeur à chaque objet
+  - une fonction entière $p$ qui associe un poids à chaque objet
   - un poids total $P$
   - une valeur totale minimale $V$
-- Question : pouvons-nous choisir des objets de de manière a ne pas dépasser le poids total $P$ et a avoir une valeur totale au moins $V$ ?
+- Question : pouvons-nous choisir des objets de manière à ne pas dépasser le poids total $P$ et à avoir une valeur totale au moins $V$ ?
 
 *Réduction polynomiale :*
 
@@ -108,8 +108,7 @@ Finalement, $p_1$ $\leq$ $p_2$
 
 # Classique en DS
 
-TD2 : exo4  variante ${a_k, b_k}$
-
+TD2 : exo4  variante ${a_k, b_k}$  
 et vérifier la parité d'un nombre
 
 # 10/10/2022
@@ -125,3 +124,5 @@ graph TB
     a((q)) --> | a/a/D | b(( ))
     a((q)) --> | a/b/G | c(( ))
 ```
+
+Plusieurs choix à partir d'un même état.
