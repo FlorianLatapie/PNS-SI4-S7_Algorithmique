@@ -100,6 +100,28 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
       * $\{x, v_1\} \in E'$
       * $\{v_i, v_{i+1}\} \in E'$ pout $i$ de $1$ à $n-2$
       * $\{v_{n-1}, y\} \in E'$ car les voisins de $x$ sont les voisins de $y$
+      * $\{y, y'\} \in E'$
+
+    "$\Leftarrow$" S'il existe une chaineham dans $G'$, dont les deux extrémités sont $x'$ et $y'$.  
+    Soit $(x', x, v_1, \dots, v_{n-1}, y, y')$ une chaine hamiltonienne  
+    Comme $\{y, v_{n-1}\}$  
+    Donc $\{v_n, v_{n-1}\} \in  
+    Finalement $(x, v_1, \dots, v_{n-1})$ est un cycleham de $G$
+
+5. Circuitham $\propto$ Cheminham  
+    Pour tout $G = (V, E)$  
+    $V' = V \cup \{x, z\}$  
+    $E' = E \cup \{(y, v), v \in N_{G,S}(v)\} \cup \{x, z\}$
+
+    "$\Rightarrow$" Soit $(x, v_1, \dots, v_{n-1})$ un circuitham de $G$  
+    Le chemin $(y, v_1, \dots, v_{n-1}, x, z)$ est hamiltonien car :
+
+      * $(y, v_1) \in E'$ car $(x, v_1) \in E'$ par hypothèse
+      * $(x, z) \in E'$
+
+    "$\Leftarrow$" Soit $(y, v_1, \dots, v_{n-1}, x, z)$ un chemin hamiltonien  
+    On montre que $(x, v_1, \dots, v_{n-1}, x)$ est un circuitham de car $(x, v_1) \in E'$ par construction de $G'$  
+    (les voisins sortant de $y$ sont les voisins sortants de $x$)
 
 ---
 
