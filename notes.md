@@ -143,10 +143,11 @@ graph LR
 
 Un problème $\Pi$ est NP-complet si et seulement si (classe les plus difficiles de NP) :
 
-- $\Pi$ est dans NP
+- $\Pi$ est dans NP  
+  Comment ?  
+  - Machine de Turing non-déterministe
+  - On peut vérifier une solution en un temps polynomial
+
 - Tout problème $\Pi'$ dans NP peut être réduit polynomialement à $\Pi$
-
-Comment ?
-
-- Machine de Turing non-déterministe
-- On peut vérifier une solution en un temps polynomial
+  Comment ?
+  - On trouve un problème $\Pi'$ qui est NP-Complet et tel qu'il existe $\Pi' \propto \Pi$
