@@ -55,7 +55,7 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 
 ### Réponse exercice 2
 
-1. Cheminham $\propto$ Circuitham
+1. Cheminham $\propto$ Circuitham  
     Pour tout $G = (V, E) \xrightarrow[\text{Transformation polynomiale}]{} G' = (V', E')$
 
     $V' = V \cup \{x_0\}$  
@@ -71,7 +71,7 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 
     Donc Cheminham $\propto$ Circuitham
 
-2. Cycleham $\propto$ Circuitham
+2. Cycleham $\propto$ Circuitham  
     Pour tout $G = (V, E)$
 
     $V' = V$  
@@ -87,8 +87,19 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
     Même transformation que dans la questions 2  
     Donc Chaîneham $\propto$ Cheminham
 
-4. Cycleham $\propto$ Chaîneham
-    Pour tout $G = (V, E)$
+4. Cycleham $\propto$ Chaîneham  
+    Pour tout $G = (V, E)$  
+    $V' = V \cup \{x', y, y'\}$  
+    $E' = E \cup \{(y, v), v \in N_g(v)\} \cup \{x,x'\} \cup \{y, y'\}$
+
+    "$\Rightarrow$" Soit $(x, v_1, \dots, v_{n-1})$ un cycleham dans $G$ $n = |V|$
+
+    Considérons la chaine suivante : $(x', x, v_1, \dots, v_{n-1}, y, y')$
+    Cette chaine est hamiltonienne car :
+      * $\{x', x\} \in E'$
+      * $\{x, v_1\} \in E'$
+      * $\{v_i, v_{i+1}\} \in E'$ pout $i$ de $1$ à $n-2$
+      * $\{v_{n-1}, y\} \in E'$ car les voisins de $x$ sont les voisins de $y$
 
 ---
 
@@ -154,7 +165,7 @@ Montrer que le problème Plus petit ensemble de tests est NP-difficile.
 
 Nom : **Plus petit ensemble de tests**  
 Instance : $P$ un ensemble de pannes possibles, $C$ une famille de sous-ensembles de $P$ représentant des tests, $J$ un entier  
-Question : Existe-t-il un sous-famille de tests $C'$ de cardinalité au plus $J$ telle que pour toute 
+Question : Existe-t-il un sous-famille de tests $C'$ de cardinalité au plus $J$ telle que pour toute
 paire $p_i$, $p_j$ de pannes, il existe $c \in C'$ un test tel que $|\{p_i, p_j\} \cap c | = 1$. En d’autres termes, existe-t-il un test qui permette de distinguer la panne $p_i$ de la panne $p_j$ (pour tout $i$ et $j$).
 
 ## Exercice 8
