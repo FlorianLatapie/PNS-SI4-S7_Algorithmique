@@ -110,7 +110,7 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
    $\Leftarrow$ S'il existe une chaine Hamiltonienne dans $G'$, dont les deux extrémités sont $x'$ et $y'$.  
    Soit $(x', x, v_1, \dots, v_{n-1}, y, y')$ une chaine hamiltonienne  
    Comme $\{y, v_{n-1}\}$  
-   Donc $\{v_n, v_{n-1}\} \in  
+   Donc $\{v_n, v_{n-1}\} \in E$  
    Finalement $(x, v_1, \dots, v_{n-1})$ est un Cycle Hamiltonien de $G$
 
 5. Circuit Hamiltonien $\propto$ Chemin Hamiltonien  
