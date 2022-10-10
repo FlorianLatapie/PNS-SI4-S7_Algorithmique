@@ -64,11 +64,11 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
    $V' = V \cup \{x_0\}$  
    $E' = E \cup \{(x, v), (v, x), v \in V\}$
 
-   "$\Rightarrow$" On suppose qu'il existe un chemin Hamiltonien dans $G$  
+   $\Rightarrow$ On suppose qu'il existe un chemin Hamiltonien dans $G$  
    Soit $(v_0, v_1, \dots, v_n)$ avec $n = |V|$ ce chemin.  
    Construisons un circuit dans $G' : (x, v_0, v_1, \dots, v_n, x)$ car $(x, v_0)$ et $(v_n, x)$ sont des arcs de $E$
 
-   "$\Leftarrow$" S'il existe un Circuit Hamiltonien de $G'$, alors en enlevant les arcs $x$ de ce circuit, on obtient un
+   $\Leftarrow$ S'il existe un Circuit Hamiltonien de $G'$, alors en enlevant les arcs $x$ de ce circuit, on obtient un
    Chemin Hamiltonien dans G.
 
    On a montré que : s'il existe un Chemin Hamiltonien dans G si et seulement s'il existe un circuit hamiltonien dans $G$.
@@ -81,10 +81,10 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
    $V' = V$  
    $E' = E \cup \{(v_0, v_1), \exists v_0, v_1 \in V, (v_0, v_1) \in E\}$
 
-   "$\Rightarrow$" On suppose qu'il existe un Cycle Hamiltonien dans $G$ alors on a un Circuit Hamiltonien dans $G'$, car les arcs du cycle
+   $\Rightarrow$ On suppose qu'il existe un Cycle Hamiltonien dans $G$ alors on a un Circuit Hamiltonien dans $G'$, car les arcs du cycle
    dans $G$ sont symétriques.
 
-   "$\Leftarrow$" On suppose qu'il existe un Cycle Hamiltonien dans $G'$ alors on a un Circuit Hamiltonien dans $G$
+   $\Leftarrow$ On suppose qu'il existe un Cycle Hamiltonien dans $G'$ alors on a un Circuit Hamiltonien dans $G$
 
    Donc Cycle Hamiltonien $\propto$ Circuit Hamiltonien
 
@@ -97,7 +97,7 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
    $V' = V \cup \{x', y, y'\}$  
    $E' = E \cup \{(y, v), v \in N_g(v)\} \cup \{x,x'\} \cup \{y, y'\}$
 
-   "$\Rightarrow$" Soit $(x, v_1, \dots, v_{n-1})$ un Cycle Hamiltonien dans $G$ $n = |V|$
+   $\Rightarrow$ Soit $(x, v_1, \dots, v_{n-1})$ un Cycle Hamiltonien dans $G$ $n = |V|$
 
    Considérons la chaine suivante : $(x', x, v_1, \dots, v_{n-1}, y, y')$
    Cette chaine est hamiltonienne car :
@@ -107,7 +107,7 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
     * $\{v_{n-1}, y\} \in E'$ car les voisins de $x$ sont les voisins de $y$
     * $\{y, y'\} \in E'$
 
-   "$\Leftarrow$" S'il existe une chaine Hamiltonienne dans $G'$, dont les deux extrémités sont $x'$ et $y'$.  
+   $\Leftarrow$ S'il existe une chaine Hamiltonienne dans $G'$, dont les deux extrémités sont $x'$ et $y'$.  
    Soit $(x', x, v_1, \dots, v_{n-1}, y, y')$ une chaine hamiltonienne  
    Comme $\{y, v_{n-1}\}$  
    Donc $\{v_n, v_{n-1}\} \in  
@@ -118,13 +118,13 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
    $V' = V \cup \{x, z\}$  
    $E' = E \cup \{(y, v), v \in N_{G,S}(v)\} \cup \{x, z\}$
 
-   "$\Rightarrow$" Soit $(x, v_1, \dots, v_{n-1})$ un Circuit Hamiltonien de $G$  
+   $\Rightarrow$ Soit $(x, v_1, \dots, v_{n-1})$ un Circuit Hamiltonien de $G$  
    Le chemin $(y, v_1, \dots, v_{n-1}, x, z)$ est hamiltonien car :
 
     * $(y, v_1) \in E'$ car $(x, v_1) \in E'$ par hypothèse
     * $(x, z) \in E'$
 
-   "$\Leftarrow$" Soit $(y, v_1, \dots, v_{n-1}, x, z)$ un chemin hamiltonien  
+   $\Leftarrow$ Soit $(y, v_1, \dots, v_{n-1}, x, z)$ un chemin hamiltonien  
    On montre que $(x, v_1, \dots, v_{n-1}, x)$ est un Circuit Hamiltonien de car $(x, v_1) \in E'$ par construction de $G'$  
    (les voisins sortant de $y$ sont les voisins sortants de $x$)
 
