@@ -82,10 +82,10 @@ Nous considérons le problème du calcul de la longueur en binaire d’un mot su
 donné en entrée.
 
 - Décrire une machine de Turing à deux rubans qui effectue le calcul et évaluer sa
-complexité.
+  complexité.
 - Même question avec un seul ruban.
 - Comment améliorer la complexité de votre machine précédente (à un seul ruban) afin
-d’obtenir une complexité de O(n log n) ?
+  d’obtenir une complexité de O(n log n) ?
 - En déduire une machine à deux rubans de complexité linéaire ?
 
 ```mermaid

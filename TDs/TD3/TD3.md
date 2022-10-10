@@ -6,7 +6,7 @@ Question : existe-t-il un sous-ensemble $E' \subseteq E$ tel que la somme des é
 
 ## Exercice 1
 
-Montrer que Somme de Sous-Ensembles est dans NP en décrivant une machine de Turing non-déterministe.
+Montrer que Somme de Sous-Ensembles est dans NP en décrivant une machine de Turing non déterministe.
 
 ### Réponse exercice 1
 
@@ -18,8 +18,8 @@ graph LR
 
 La réponse est donc oui.
 
-* Algorithme de vérificatio d'une solution en temps polynomial
-Somme des éléments en entrée d'une taille $n$, complexité en temps $O(n)$
+* Algorithme de vérification d'une solution en temps polynomial
+  Somme des éléments en entrée d'une taille $n$, complexité en temps $O(n)$
 
 Le problème est donc NP
 
@@ -27,105 +27,111 @@ Le problème est donc NP
 
 Soient les problèmes suivants.
 
-Nom : **Chaîneham**
+Nom : **Chaîne Hamiltonienne**
 Instance : Un graphe fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
-Question : Le graphe admet-il une chaîne Hamiltonienne (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
+Question : Le graphe admet-il une chaîne Hamiltonienne (c’est-à-dire qui passe une et une seule fois par tous les
+sommets) ?
 
-Nom : **Cycleham**
+Nom : **Cycle Hamiltonien**
 Instance : Un graphe fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
 Question : Le graphe admet-il un cycle Hamiltonien (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
 
-Nom : **Cheminham**
+Nom : **Chemin Hamiltonien**
 Instance : Un graphe orienté fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
-Question : Le graphe admet-il un chemin Hamiltonienne (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
+Question : Le graphe admet-il un chemin Hamiltonienne (c’est-à-dire qui passe une et une seule fois par tous les
+sommets) ?
 
-Nom : **Circuitham**
+Nom : **Circuit Hamiltonien**
 Instance : Un graphe orienté fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
-Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
+Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe une et une seule fois par tous les sommets)
+?
 
 ## Exercice 2
 
-1. Cheminham $\propto$ Circuitham
-2. Cycleham $\propto$ Circuitham
-3. Chaîneham $\propto$ Cheminham
-4. Cycleham $\propto$ Chaîneham
-5. Circuitham $\propto$ Cheminham
-6. Circuitham $\propto$ Cycleham
-7. Cheminham $\propto$ Chaîneham
+1. Chemin Hamiltonien $\propto$ Circuit Hamiltonien
+2. Cycle Hamiltonien $\propto$ Circuit Hamiltonien
+3. Chaîne Hamiltonienne $\propto$ Chemin Hamiltonien
+4. Cycle Hamiltonien $\propto$ Chaîne Hamiltonienne
+5. Circuit Hamiltonien $\propto$ Chemin Hamiltonien
+6. Circuit Hamiltonien $\propto$ Cycle Hamiltonien
+7. Chemin Hamiltonien $\propto$ Chaîne Hamiltonienne
 
 ### Réponse exercice 2
 
-1. Cheminham $\propto$ Circuitham  
-    Pour tout $G = (V, E) \xrightarrow[\text{Transformation polynomiale}]{} G' = (V', E')$
+1. Chemin Hamiltonien $\propto$ Circuit Hamiltonien  
+   Pour tout $G = (V, E) \xrightarrow[\text{Transformation polynomiale}]{} G' = (V', E')$
 
-    $V' = V \cup \{x_0\}$  
-    $E' = E \cup \{(x, v), (v, x), v \in V\}$
+   $V' = V \cup \{x_0\}$  
+   $E' = E \cup \{(x, v), (v, x), v \in V\}$
 
-    "$\Rightarrow$" On suppose qu'il existe un chemin Hamiltonien dans $G$  
-    Soit $(v_0, v_1, \dots, v_n)$ avec $n = |V|$ ce chemin.  
-    Construisons un circuit dans $G' : (x, v_0, v_1, \dots, v_n, x)$ car $(x, v_0)$ et $(v_n, x)$ sont des arcs de $E$
+   "$\Rightarrow$" On suppose qu'il existe un chemin Hamiltonien dans $G$  
+   Soit $(v_0, v_1, \dots, v_n)$ avec $n = |V|$ ce chemin.  
+   Construisons un circuit dans $G' : (x, v_0, v_1, \dots, v_n, x)$ car $(x, v_0)$ et $(v_n, x)$ sont des arcs de $E$
 
-    "$\Leftarrow$" S'il existe un circuitham de $G'$, alors en enelvant les arcs $x$ de ce circuit, on obtient un Cheminham dans G.
+   "$\Leftarrow$" S'il existe un Circuit Hamiltonien de $G'$, alors en enlevant les arcs $x$ de ce circuit, on obtient un
+   Chemin Hamiltonien dans G.
 
-    On a montré que : s'il existe un Cheminham dans G si et seulement si il existe un circuit hamiltonien dans $G$.
+   On a montré que : s'il existe un Chemin Hamiltonien dans G si et seulement s'il existe un circuit hamiltonien dans $G$.
 
-    Donc Cheminham $\propto$ Circuitham
+   Donc Chemin Hamiltonien $\propto$ Circuit Hamiltonien
 
-2. Cycleham $\propto$ Circuitham  
-    Pour tout $G = (V, E)$
+2. Cycle Hamiltonien $\propto$ Circuit Hamiltonien  
+   Pour tout $G = (V, E)$
 
-    $V' = V$  
-    $E' = E \cup \{(v_0, v_1), \exists v_0, v_1 \in V, (v_0, v_1) \in E\}$
+   $V' = V$  
+   $E' = E \cup \{(v_0, v_1), \exists v_0, v_1 \in V, (v_0, v_1) \in E\}$
 
-    "$\Rightarrow$" On suppose qu'il existe un cycleham dans $G$ alors on a un circuitham dans $G'$ car les arcs du cycle dans $G$ sont symétriques.
+   "$\Rightarrow$" On suppose qu'il existe un Cycle Hamiltonien dans $G$ alors on a un Circuit Hamiltonien dans $G'$, car les arcs du cycle
+   dans $G$ sont symétriques.
 
-    "$\Leftarrow$" On suppose qu'il existe un cycleham dans $G'$ alors on a un circuitham dans $G$
+   "$\Leftarrow$" On suppose qu'il existe un Cycle Hamiltonien dans $G'$ alors on a un Circuit Hamiltonien dans $G$
 
-    Donc Cycleham $\propto$ Circuitham
+   Donc Cycle Hamiltonien $\propto$ Circuit Hamiltonien
 
-3. Chaîneham $\propto$ Cheminham
-    Même transformation que dans la questions 2  
-    Donc Chaîneham $\propto$ Cheminham
+3. Chaîne Hamiltonienne $\propto$ Chemin Hamiltonien
+   Même transformation que dans la question 2  
+   Donc Chaîne Hamiltonienne $\propto$ Chemin Hamiltonien
 
-4. Cycleham $\propto$ Chaîneham  
-    Pour tout $G = (V, E)$  
-    $V' = V \cup \{x', y, y'\}$  
-    $E' = E \cup \{(y, v), v \in N_g(v)\} \cup \{x,x'\} \cup \{y, y'\}$
+4. Cycle Hamiltonien $\propto$ Chaîne Hamiltonienne  
+   Pour tout $G = (V, E)$  
+   $V' = V \cup \{x', y, y'\}$  
+   $E' = E \cup \{(y, v), v \in N_g(v)\} \cup \{x,x'\} \cup \{y, y'\}$
 
-    "$\Rightarrow$" Soit $(x, v_1, \dots, v_{n-1})$ un cycleham dans $G$ $n = |V|$
+   "$\Rightarrow$" Soit $(x, v_1, \dots, v_{n-1})$ un Cycle Hamiltonien dans $G$ $n = |V|$
 
-    Considérons la chaine suivante : $(x', x, v_1, \dots, v_{n-1}, y, y')$
-    Cette chaine est hamiltonienne car :
-      * $\{x', x\} \in E'$
-      * $\{x, v_1\} \in E'$
-      * $\{v_i, v_{i+1}\} \in E'$ pout $i$ de $1$ à $n-2$
-      * $\{v_{n-1}, y\} \in E'$ car les voisins de $x$ sont les voisins de $y$
-      * $\{y, y'\} \in E'$
+   Considérons la chaine suivante : $(x', x, v_1, \dots, v_{n-1}, y, y')$
+   Cette chaine est hamiltonienne car :
+    * $\{x', x\} \in E'$
+    * $\{x, v_1\} \in E'$
+    * $\{v_i, v_{i+1}\} \in E'$ pout $i$ de $1$ à $n-2$
+    * $\{v_{n-1}, y\} \in E'$ car les voisins de $x$ sont les voisins de $y$
+    * $\{y, y'\} \in E'$
 
-    "$\Leftarrow$" S'il existe une chaineham dans $G'$, dont les deux extrémités sont $x'$ et $y'$.  
-    Soit $(x', x, v_1, \dots, v_{n-1}, y, y')$ une chaine hamiltonienne  
-    Comme $\{y, v_{n-1}\}$  
-    Donc $\{v_n, v_{n-1}\} \in  
-    Finalement $(x, v_1, \dots, v_{n-1})$ est un cycleham de $G$
+   "$\Leftarrow$" S'il existe une chaine Hamiltonienne dans $G'$, dont les deux extrémités sont $x'$ et $y'$.  
+   Soit $(x', x, v_1, \dots, v_{n-1}, y, y')$ une chaine hamiltonienne  
+   Comme $\{y, v_{n-1}\}$  
+   Donc $\{v_n, v_{n-1}\} \in  
+   Finalement $(x, v_1, \dots, v_{n-1})$ est un Cycle Hamiltonien de $G$
 
-5. Circuitham $\propto$ Cheminham  
-    Pour tout $G = (V, E)$  
-    $V' = V \cup \{x, z\}$  
-    $E' = E \cup \{(y, v), v \in N_{G,S}(v)\} \cup \{x, z\}$
+5. Circuit Hamiltonien $\propto$ Chemin Hamiltonien  
+   Pour tout $G = (V, E)$  
+   $V' = V \cup \{x, z\}$  
+   $E' = E \cup \{(y, v), v \in N_{G,S}(v)\} \cup \{x, z\}$
 
-    "$\Rightarrow$" Soit $(x, v_1, \dots, v_{n-1})$ un circuitham de $G$  
-    Le chemin $(y, v_1, \dots, v_{n-1}, x, z)$ est hamiltonien car :
+   "$\Rightarrow$" Soit $(x, v_1, \dots, v_{n-1})$ un Circuit Hamiltonien de $G$  
+   Le chemin $(y, v_1, \dots, v_{n-1}, x, z)$ est hamiltonien car :
 
-      * $(y, v_1) \in E'$ car $(x, v_1) \in E'$ par hypothèse
-      * $(x, z) \in E'$
+    * $(y, v_1) \in E'$ car $(x, v_1) \in E'$ par hypothèse
+    * $(x, z) \in E'$
 
-    "$\Leftarrow$" Soit $(y, v_1, \dots, v_{n-1}, x, z)$ un chemin hamiltonien  
-    On montre que $(x, v_1, \dots, v_{n-1}, x)$ est un circuitham de car $(x, v_1) \in E'$ par construction de $G'$  
-    (les voisins sortant de $y$ sont les voisins sortants de $x$)
+   "$\Leftarrow$" Soit $(y, v_1, \dots, v_{n-1}, x, z)$ un chemin hamiltonien  
+   On montre que $(x, v_1, \dots, v_{n-1}, x)$ est un Circuit Hamiltonien de car $(x, v_1) \in E'$ par construction de $G'$  
+   (les voisins sortant de $y$ sont les voisins sortants de $x$)
 
 ---
 
-Pour la suite, nous pourrons utiliser la NP-difficulté des problèmes suivants : Cheminham, Circuitham, Cycleham, Chaîneham, Clique, Partition, 3-Dimensional Matching, X3-SAT.
+Pour la suite, nous pourrons utiliser la NP-difficulté des problèmes suivants : Chemin Hamiltonien, Circuit Hamiltonien, Cycle Hamiltonien,
+Chaîne Hamiltonienne, Clique, Partition, 3-Dimensional Matching, X3-SAT.
 
 Nom : **Clique**  
 Instance : un graphe fini $G(V, E)$, et un entier positif $C \leq |V|$  
@@ -133,11 +139,14 @@ Question : le graphe admet-il une clique (sous-graphe complet) de cardinalité a
 
 Nom : **Partition**  
 Instance : un ensemble fini d'entiers non-négatifs $A$.  
-Question : existe-t-il une partition de $A$ en deux ensembles $A'$ et $A"$, telle que la somme des éléments de $A'$ soit égale à la somme des éléments de $A"$ ?
+Question : existe-t-il une partition de $A$ en deux ensembles $A'$ et $A"$, telle que la somme des éléments de $A'$ soit
+égale à la somme des éléments de $A"$ ?
 
 Nom : **3-Dimensional Matching**  
-Instance : un ensemble $M$ de triplets $(w, x, y)$, avec $w$, $x$ et $y$ des éléments de trois ensembles $W$, $X$, $Y$ de même cardinalité $q$.  
-Question : $M$ contient-il un couplage (un sous-ensemble de triplets contenant tous les éléments une fois et une seule) ?
+Instance : un ensemble $M$ de triplets $(w, x, y)$, avec $w$, $x$ et $y$ des éléments de trois ensembles $W$, $X$, $Y$
+de même cardinalité $q$.  
+Question : $M$ contient-il un couplage (un sous-ensemble de triplets contenant tous les éléments une fois et une seule)
+?
 
 Nom : **X3-SAT**  
 Instance : une formule logique sous forme normale conjonctive, composée de clauses de degré exactement 3.  
@@ -145,9 +154,12 @@ Question : est-ce que la formule est satisfiable ?
 
 ## Exercice 3
 
-Définition (Sous-graphe) : Le sous-graphe de $G = (V,E)$ engendré par un sous-ensemble des sommets $S$ de $V$ est le graphe $GS$ dont les sommets sont les sommets de $S$ et les arêtes sont celles de $G$ dont les deux extrémités sont dans $S$.
+Définition (Sous-graphe) : Le sous-graphe de $G = (V,E)$ engendré par un sous-ensemble des sommets $S$ de $V$ est le
+graphe $GS$ dont les sommets sont les sommets de $S$ et les arêtes sont celles de $G$ dont les deux extrémités sont dans
+$S$.
 
-Définition (Graphe partiel) : Le graphe partiel de $G = (V,E)$ engendré par un sous-ensemble $A$ de l’ensemble des arêtes de $G$ est le graphe obtenu de $G$ en retirant les arêtes de $E \backslash A$.
+Définition (Graphe partiel) : Le graphe partiel de $G = (V,E)$ engendré par un sous-ensemble $A$ de l’ensemble des
+arêtes de $G$ est le graphe obtenu de $G$ en retirant les arêtes de $E \backslash A$.
 
 Définition (Sous-graphe partiel) : Le sous-graphe partiel de $G$ est le sous-graphe d’un graphe partiel de $G$.
 
@@ -178,7 +190,8 @@ Question : Existe-t-il un arbre couvrant de degré au plus k ?
 Montrer que le problème Ordonnancement de tâches est NP-difficile.
 
 Nom : **Ordonnancement de tâches**  
-Instance : Soient $k$ tâches de durées respectives $t_1, \dots, t_k$ (durées entières), $T$ le temps total d’exécution autorisé et $n$ le nombre de processeurs.  
+Instance : Soient $k$ tâches de durées respectives $t_1, \dots, t_k$ (durées entières), $T$ le temps total d’exécution
+autorisé et $n$ le nombre de processeurs.  
 Question : Est-il possible d’exécuter les $k$ tâches sur une machine à $n$ processeurs en moins de $T$ unités de temps ?
 
 ## Exercice 7
@@ -186,16 +199,19 @@ Question : Est-il possible d’exécuter les $k$ tâches sur une machine à $n$ 
 Montrer que le problème Plus petit ensemble de tests est NP-difficile.
 
 Nom : **Plus petit ensemble de tests**  
-Instance : $P$ un ensemble de pannes possibles, $C$ une famille de sous-ensembles de $P$ représentant des tests, $J$ un entier  
-Question : Existe-t-il un sous-famille de tests $C'$ de cardinalité au plus $J$ telle que pour toute
-paire $p_i$, $p_j$ de pannes, il existe $c \in C'$ un test tel que $|\{p_i, p_j\} \cap c | = 1$. En d’autres termes, existe-t-il un test qui permette de distinguer la panne $p_i$ de la panne $p_j$ (pour tout $i$ et $j$).
+Instance : $P$ un ensemble de pannes possibles, $C$ une famille de sous-ensembles de $P$ représentant des tests, $J$ un
+entier  
+Question : Existe-t-il une sous-famille de tests $C'$ de cardinalité au plus $J$ telle que pour toute
+paire $p_i$, $p_j$ de pannes, il existe $c \in C'$ un test tel que $|\{p_i, p_j\} \cap c | = 1$. En d’autres termes,
+existe-t-il un test qui permette de distinguer la panne $p_i$ de la panne $p_j$ (pour tout $i$ et $j$).
 
 ## Exercice 8
 
 Montrer que le problème Score est NP-difficile.
 
 Nom : **Score**  
-Instance : $G = (V, E)$ un graphe arête-pondéré non orienté dont les poids des arêtes sont des entiers non négatifs, $u$ et $v$ deux sommets et $S$ un entier.  
+Instance : $G = (V, E)$ un graphe arête-pondéré non orienté dont les poids des arêtes sont des entiers non négatifs, $u$
+et $v$ deux sommets et $S$ un entier.  
 Question : Existe-t-il une chaîne simple de $u$ à $v$ de poids supérieur ou égal à $S$ ?
 
 ## Exercice 9
@@ -212,4 +228,4 @@ Montrer que le problème Somme de sous-ensembles est NP-difficile (en utilisant 
 
 Nom : **Somme de sous-ensembles**  
 Instance : Un ensemble A d’entiers non négatifs et un entier $C$  
-Question : Existe-t-il un sous-ensemble de A qui somme à $C$ ?  
+Question : Existe-t-il un sous-ensemble de $A$ qui somme à $C$ ?  
