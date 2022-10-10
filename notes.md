@@ -120,9 +120,33 @@ et vérifier la parité d'un nombre
 Cette machine est non déterministe :
 
 ```mermaid
-graph TB
+graph LR
     a((q)) --> | a/a/D | b(( ))
     a((q)) --> | a/b/G | c(( ))
 ```
 
-Plusieurs choix à partir d'un même état.
+Plusieurs transitions à partir d'un même état.
+
+**Définition** : NP (Nondeterministic Polynomial) non déterministe polynomial est la classe de problèmes qu'il est possible de résoudre en un temps polynomial avec une machine de Turing non déterministe.
+
+Exemple :
+
+- Partition
+- Entrée : un ensemble A non négatif (écrit en base $k => 2$)
+- Question : Est-ce qu'il existe un sous ensemble $A_1 <= A$ tel que $\sum_{a \in A_1} a = \sum_{a' \in A \backslash A_1} a'$
+
+```mermaid
+graph LR
+    a(( )) --> b((Choisir a))
+    a(( )) --> c((Ne pas<br/>choisir A))
+```
+
+Un problème $\Pi$ est NP-complet si et seulement si (classe les plus difficiles de NP) :
+
+- $\Pi$ est dans NP
+- Tout problème $\Pi'$ dans NP peut être réduit polynomialement à $\Pi$
+
+Comment ?
+
+- Machine de Turing non-déterministe
+- On peut vérifier une solution en un temps polynomial
