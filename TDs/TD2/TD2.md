@@ -1,8 +1,10 @@
-# TD2 
-## Exercice 1 
-Décrire  de  manière  détaillée  une  machine  de  Turing  déterministe  à  un  seul  ruban  qui 
-reconnaît le langage des mots composés d’un nombre en binaire qui contient exactement un 
-0 et qui n’est ni en première ni en dernière position. 
+# TD2
+
+## Exercice 1
+
+Décrire  de  manière  détaillée  une  machine  de  Turing  déterministe  à  un  seul  ruban  qui
+reconnaît le langage des mots composés d’un nombre en binaire qui contient exactement un
+0 et qui n’est ni en première ni en dernière position.
 Exemples de mots du langage : 11011111 ; 101111111 ; 11111101 ; 101
 
 ```mermaid
@@ -22,9 +24,10 @@ graph TB
 ```
 
 ## Exercice 2
-Décrire de manière détaillée une machine de Turing déterministe à deux rubans qui reconnaît 
-le langage des mots composés d’un nombre en binaire répété deux fois. 
-Exemples de mots du langage : 011011 ; 1111 ; 101011101011 ; 000111000111 
+
+Décrire de manière détaillée une machine de Turing déterministe à deux rubans qui reconnaît
+le langage des mots composés d’un nombre en binaire répété deux fois.
+Exemples de mots du langage : 011011 ; 1111 ; 101011101011 ; 000111000111
 
 ```mermaid
 graph LR
@@ -37,7 +40,7 @@ graph LR
     q3((q3)) --> | 0/b/D<br/>1/b/D | qf((qf))
 ```
 
-Même question avec une machine de Turing déterministe à un seul ruban. 
+Même question avec une machine de Turing déterministe à un seul ruban.
 
 ```mermaid
 graph TB
@@ -74,14 +77,16 @@ graph TB
 ```
 
 ## Exercice 3
-Nous considérons le problème du calcul de la longueur en binaire d’un mot sur l’alphabet {a,b} 
-donné en entrée. 
-- Décrire  une  machine  de  Turing  à  deux  rubans  qui  effectue  le  calcul  et  évaluer  sa 
-complexité. 
-- Même question avec un seul ruban. 
-- Comment améliorer la complexité de votre machine précédente (à un seul ruban) afin 
-d’obtenir une complexité de O(n log n) ? 
-- En déduire une machine à deux rubans de complexité linéaire ? 
+
+Nous considérons le problème du calcul de la longueur en binaire d’un mot sur l’alphabet {a,b}
+donné en entrée.
+
+- Décrire  une  machine  de  Turing  à  deux  rubans  qui  effectue  le  calcul  et  évaluer  sa
+complexité.
+- Même question avec un seul ruban.
+- Comment améliorer la complexité de votre machine précédente (à un seul ruban) afin
+d’obtenir une complexité de O(n log n) ?
+- En déduire une machine à deux rubans de complexité linéaire ?
 
 ```mermaid
 graph LR
@@ -99,8 +104,9 @@ graph LR
 ```
 
 ## Exercice 4
-Décrire de manière détaillée une machine de Turing déterministe à deux rubans qui reconnaît 
-le langage des mots $\{0^k1^k : k > 0\}$. Quelle est la complexité de votre machine ? 
+
+Décrire de manière détaillée une machine de Turing déterministe à deux rubans qui reconnaît
+le langage des mots $\{0^k1^k : k > 0\}$. Quelle est la complexité de votre machine ?
 Premiers mots du langage : 01 ; 0011 ; 000111
 
 ```mermaid
@@ -112,9 +118,10 @@ graph LR
 ```
 
 ## Exercice 5
-Décrire de manière détaillée une machine de Turing déterministe à deux rubans qui reconnaît 
-le langage des mots (à une lettre a)  dont la longueur est un carré parfait. 
-Premiers mots du langage : a ; aaaa ; aaaaaaaaa ; aaaaaaaaaaaaaaaa 
+
+Décrire de manière détaillée une machine de Turing déterministe à deux rubans qui reconnaît
+le langage des mots (à une lettre a)  dont la longueur est un carré parfait.
+Premiers mots du langage : a ; aaaa ; aaaaaaaaa ; aaaaaaaaaaaaaaaa
 
 ```mermaid
 graph LR
@@ -129,11 +136,12 @@ graph LR
 ```
 
 ## Exercice 6
-Décrire de manière détaillée une machine de Turing déterministe qui fait l’addition de deux 
-nombres binaires. Le nombre de rubans est trois. Vous pourrez également écrire une machine 
-de Turing avec deux rubans et ensuite un ruban. 
 
-```mermaid 
+Décrire de manière détaillée une machine de Turing déterministe qui fait l’addition de deux
+nombres binaires. Le nombre de rubans est trois. Vous pourrez également écrire une machine
+de Turing avec deux rubans et ensuite un ruban.
+
+```mermaid
 graph TB
     q0((q0)) --> | 0,B,B/B,0,B/D,D,S<br/>1,B,B/B,1,B/D,D,S | q0((q0))
     q0((q0)) --> | +,B,B/B,B,B/D,S,S | q1((q1))
@@ -150,9 +158,9 @@ graph TB
 ```
 
 ## Exercice 7
- 
-Décrire de manière détaillée une machine de Turing déterministe à un seul ruban qui trie les 
-lettres d’un mot écrit sur l’alphabet {x,y}. 
-Exemple : si le mot est xyxxy alors le résultat sera xxxyy 
- 
-Même question avec l’alphabet {x,y,z}. 
+
+Décrire de manière détaillée une machine de Turing déterministe à un seul ruban qui trie les
+lettres d’un mot écrit sur l’alphabet {x,y}.
+Exemple : si le mot est xyxxy alors le résultat sera xxxyy
+
+Même question avec l’alphabet {x,y,z}.
