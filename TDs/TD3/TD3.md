@@ -107,6 +107,7 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
     Comme $\{y, v_{n-1}\}$  
     Donc $\{v_n, v_{n-1}\} \in E$  
     Finalement $(x, v_1, \dots, v_{n-1})$ est un Cycle Hamiltonien de $G$
+
 5. **Circuit Hamiltonien $\propto$ chemin Hamiltonien**  
     Pour tout $G = (V, E)$  
     $V' = V \cup \{x, z\}$  
@@ -118,6 +119,85 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
     $\Leftarrow$ Soit $(y, v_1, \dots, v_{n-1}, x, z)$ un chemin hamiltonien  
     On montre que $(x, v_1, \dots, v_{n-1}, x)$ est un circuit Hamiltonien de car $(x, v_1) \in E'$ par construction de $G'$  
     (les voisins sortant de $y$ sont les voisins sortants de $x$)
+
+6. **Circuit Hamiltonien $\propto$ cycle Hamiltonien**  
+
+    Non valide :
+
+    ```mermaid
+    graph LR
+        a(( )) --> b(( ))
+        a(( )) --> c
+        c(( )) --> b
+    ```
+
+    Valide :
+
+    ```mermaid
+    graph LR 
+        a(( )) --- b(( ))
+        a(( )) --- c
+        c(( )) --- b
+    ```
+
+    Si on a un circuit alors il y a forcément un cycle :
+
+    ```mermaid
+    graph LR
+        a((a)) --> c
+        b((b)) --> c
+        c((c)) --> d
+        c --> e
+        d((d)) --> a
+        e((e)) --> b
+    ```
+
+    on obtient :
+
+    ```mermaid
+    graph LR
+        a(( )) --- a1
+        a1(( )) --- a2
+        a2(( )) --- d
+        
+        b(( )) --- c2
+        b1(( )) --- b
+        b2(( )) --- b1
+        
+        c(( )) --- c1
+        c --- e2
+        c1(( )) --- c2
+        c2(( )) --- a
+        
+        
+        d(( )) --- d1
+        d1(( )) --- d2
+        d2(( )) --- c
+
+        e(( )) --- b2
+        e1(( )) --- e
+        e2(( )) --- e1
+
+
+        style a fill:#00F
+        style b fill:#00F
+        style c fill:#00F
+        style d fill:#00F
+        style e fill:#00F
+
+    ```
+
+    Transformation d'un graphe dirigé en un graphe non dirigé :
+
+    - On transforme chaque noeud du problème initial en 3 noeuds : un qui gère les entrées, un qui gère les sorties et un dernier au milieu reliant les deux précédents. Ce dernier noeud permet de bien vérifier une entrée puis une sortie.
+    - La transformation est polynomiale.
+
+7. **Circuit Hamiltonien $\propto$ chemin Hamiltonien**  
+    Deux possibilités :
+    - faire la même transformation que dans la question 6
+    - Utiliser la transitivité
+
+    Chemin Hamiltonien $\propto$ Circuit Hamiltonien $\propto$ Cycle Hamiltonien $\propto$ Chaîne Hamiltonienne
 
 Méthodologie pour "Q NP-Complet ?"
 
