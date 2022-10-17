@@ -6,7 +6,7 @@ Question : existe-t-il un sous-ensemble $E' \subseteq E$ tel que la somme des é
 
 ## Exercice 1
 
-Montrer que Somme de Sous-Ensembles est dans NP en décrivant une machine de Turing non déterministe.
+Montrer que Somme de Sous-Ensembles est dans NP en décrivant une machine de Turing non-déterministe.
 
 ### Réponse exercice 1
 
@@ -18,8 +18,8 @@ graph LR
 
 La réponse est donc oui.
 
-* Algorithme de vérification d'une solution en temps polynomial
-  Somme des éléments en entrée d'une taille $n$, complexité en temps $O(n)$
+* Algorithme de vérificatio d'une solution en temps polynomial
+Somme des éléments en entrée d'une taille $n$, complexité en temps $O(n)$
 
 Le problème est donc NP
 
@@ -55,11 +55,11 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 
 ### Réponse exercice 2
 
-   Pour tout $G = (V, E) \xrightarrow[\text{Transformation polynomiale}]{} G' = (V', E')$
 1. Cheminham $\propto$ Circuitham  
+    Pour tout $G = (V, E) \xrightarrow[\text{Transformation polynomiale}]{} G' = (V', E')$
 
-   $V' = V \cup \{x_0\}$  
-   $E' = E \cup \{(x, v), (v, x), v \in V\}$
+    $V' = V \cup \{x_0\}$  
+    $E' = E \cup \{(x, v), (v, x), v \in V\}$
 
     "$\Rightarrow$" On suppose qu'il existe un chemin Hamiltonien dans $G$  
     Soit $(v_0, v_1, \dots, v_n)$ avec $n = |V|$ ce chemin.  
@@ -118,10 +118,8 @@ Instance : un ensemble fini d'entiers non-négatifs $A$.
 Question : existe-t-il une partition de $A$ en deux ensembles $A'$ et $A"$, telle que la somme des éléments de $A'$ soit égale à la somme des éléments de $A"$ ?
 
 Nom : **3-Dimensional Matching**  
-Instance : un ensemble $M$ de triplets $(w, x, y)$, avec $w$, $x$ et $y$ des éléments de trois ensembles $W$, $X$, $Y$
-de même cardinalité $q$.  
-Question : $M$ contient-il un couplage (un sous-ensemble de triplets contenant tous les éléments une fois et une seule)
-?
+Instance : un ensemble $M$ de triplets $(w, x, y)$, avec $w$, $x$ et $y$ des éléments de trois ensembles $W$, $X$, $Y$ de même cardinalité $q$.  
+Question : $M$ contient-il un couplage (un sous-ensemble de triplets contenant tous les éléments une fois et une seule) ?
 
 Nom : **X3-SAT**  
 Instance : une formule logique sous forme normale conjonctive, composée de clauses de degré exactement 3.  
