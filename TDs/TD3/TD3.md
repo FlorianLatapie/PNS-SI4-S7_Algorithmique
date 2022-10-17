@@ -18,7 +18,7 @@ graph LR
 
 La réponse est donc oui.
 
-* Algorithme de vérification d'une solution en temps polynomial
+- Algorithme de vérification d'une solution en temps polynomial
 Somme des éléments en entrée d'une taille $n$, complexité en temps $O(n)$
 
 Le problème est donc NP
@@ -31,7 +31,7 @@ Nom : **Chaîne Hamiltionienne**
 Instance : Un graphe fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
 Question : Le graphe admet-il une chaîne Hamiltonienne (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
 
-Nom : **cycle Hamiltonien**
+Nom : **Cycle Hamiltonien**
 Instance : Un graphe fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
 Question : Le graphe admet-il un cycle Hamiltonien (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
 
@@ -39,21 +39,21 @@ Nom : **Chemin Hamiltionien**
 Instance : Un graphe orienté fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
 Question : Le graphe admet-il un chemin Hamiltonienne (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
 
-Nom : **circuit Hamiltonien**
+Nom : **Circuit Hamiltonien**
 Instance : Un graphe orienté fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
 Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
 
 ## Exercice 2
 
 1. Chemin Hamiltionien $\propto$ circuit Hamiltonien
-2. cycle Hamiltonien $\propto$ circuit Hamiltonien
-3. Chaîne Hamiltionienne $\propto$ Chemin Hamiltionien
-4. cycle Hamiltonien $\propto$ Chaîne Hamiltionienne
-5. circuit Hamiltonien $\propto$ Chemin Hamiltionien
-6. circuit Hamiltonien $\propto$ cycle Hamiltonien
-7. Chemin Hamiltionien $\propto$ Chaîne Hamiltionienne
+2. Cycle Hamiltonien $\propto$ circuit Hamiltonien
+3. Chaîne Hamiltionienne $\propto$ chemin Hamiltionien
+4. Cycle Hamiltonien $\propto$ chaîne Hamiltionienne
+5. Circuit Hamiltonien $\propto$ chemin Hamiltionien
+6. Circuit Hamiltonien $\propto$ cycle Hamiltonien
+7. Chemin Hamiltionien $\propto$ chaîne Hamiltionienne
 
-### Réponse exercice 2
+### Réponses exercice 2
 
 1. Chemin Hamiltionien $\propto$ circuit Hamiltonien  
     Pour tout $G = (V, E) \xrightarrow[\text{Transformation polynomiale}]{} G' = (V', E')$
@@ -65,11 +65,11 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
     Soit $(v_0, v_1, \dots, v_n)$ avec $n = |V|$ ce chemin.  
     Construisons un circuit dans $G' : (x, v_0, v_1, \dots, v_n, x)$ car $(x, v_0)$ et $(v_n, x)$ sont des arcs de $E$
 
-    $\Leftarrow$ S'il existe un circuit Hamiltonien de $G'$, alors en enelvant les arcs $x$ de ce circuit, on obtient un Chemin Hamiltionien dans G.
+    $\Leftarrow$ S'il existe un circuit Hamiltonien de $G'$, alors en enelvant les arcs $x$ de ce circuit, on obtient un chemin Hamiltionien dans G.
 
-    On a montré que : s'il existe un Chemin Hamiltionien dans G si et seulement si il existe un circuit hamiltonien dans $G$.
+    On a montré que : s'il existe un chemin Hamiltionien dans G si et seulement si il existe un circuit hamiltonien dans $G$.
 
-    Donc Chemin Hamiltionien $\propto$ circuit Hamiltonien
+    Donc chemin Hamiltionien $\propto$ circuit Hamiltonien
 
 2. cycle Hamiltonien $\propto$ circuit Hamiltonien  
     Pour tout $G = (V, E)$
@@ -83,11 +83,11 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 
     Donc cycle Hamiltonien $\propto$ circuit Hamiltonien
 
-3. Chaîne Hamiltionienne $\propto$ Chemin Hamiltionien
+3. Chaîne Hamiltionienne $\propto$ chemin Hamiltionien
     Même transformation que dans la questions 2  
-    Donc Chaîne Hamiltionienne $\propto$ Chemin Hamiltionien
+    Donc chaîne Hamiltionienne $\propto$ chemin Hamiltionien
 
-4. cycle Hamiltonien $\propto$ Chaîne Hamiltionienne  
+4. Cycle Hamiltonien $\propto$ chaîne Hamiltionienne  
     Pour tout $G = (V, E)$  
     $V' = V \cup \{x', y, y'\}$  
     $E' = E \cup \{(y, v), v \in N_g(v)\} \cup \{x,x'\} \cup \{y, y'\}$
@@ -96,27 +96,27 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 
     Considérons la chaine suivante : $(x', x, v_1, \dots, v_{n-1}, y, y')$
     Cette chaine est hamiltonienne car :
-    * $\{x', x\} \in E'$
-    * $\{x, v_1\} \in E'$
-    * $\{v_i, v_{i+1}\} \in E'$ pout $i$ de $1$ à $n-2$
-    * $\{v_{n-1}, y\} \in E'$ car les voisins de $x$ sont les voisins de $y$
-    * $\{y, y'\} \in E'$
+    - $\{x', x\} \in E'$
+    - $\{x, v_1\} \in E'$
+    - $\{v_i, v_{i+1}\} \in E'$ pout $i$ de $1$ à $n-2$
+    - $\{v_{n-1}, y\} \in E'$ car les voisins de $x$ sont les voisins de $y$
+    - $\{y, y'\} \in E'$
 
     $\Leftarrow$ S'il existe une chaine Hamiltonienne dans $G'$, dont les deux extrémités sont $x'$ et $y'$.  
     Soit $(x', x, v_1, \dots, v_{n-1}, y, y')$ une chaine hamiltonienne  
     Comme $\{y, v_{n-1}\}$  
     Donc $\{v_n, v_{n-1}\} \in E$  
     Finalement $(x, v_1, \dots, v_{n-1})$ est un Cycle Hamiltonien de $G$
-5. Circuit Hamiltonien $\propto$ Chemin Hamiltonien  
+5. Circuit Hamiltonien $\propto$ chemin Hamiltonien  
     Pour tout $G = (V, E)$  
     $V' = V \cup \{x, z\}$  
     $E' = E \cup \{(y, v), v \in N_{G,S}(v)\} \cup \{x, z\}$
-    $\Rightarrow$ Soit $(x, v_1, \dots, v_{n-1})$ un Circuit Hamiltonien de $G$  
+    $\Rightarrow$ Soit $(x, v_1, \dots, v_{n-1})$ un circuit Hamiltonien de $G$  
     Le chemin $(y, v_1, \dots, v_{n-1}, x, z)$ est hamiltonien car :
-    * $(y, v_1) \in E'$ car $(x, v_1) \in E'$ par hypothèse
-    * $(x, z) \in E'$
+    - $(y, v_1) \in E'$ car $(x, v_1) \in E'$ par hypothèse
+    - $(x, z) \in E'$
     $\Leftarrow$ Soit $(y, v_1, \dots, v_{n-1}, x, z)$ un chemin hamiltonien  
-    On montre que $(x, v_1, \dots, v_{n-1}, x)$ est un Circuit Hamiltonien de car $(x, v_1) \in E'$ par construction de $G'$  
+    On montre que $(x, v_1, \dots, v_{n-1}, x)$ est un circuit Hamiltonien de car $(x, v_1) \in E'$ par construction de $G'$  
     (les voisins sortant de $y$ sont les voisins sortants de $x$)
 
 Méthodologie pour "Q NP-Complet ?"
@@ -128,7 +128,7 @@ $\Rightarrow$ Réduction en temps polynomial
 
 ---
 
-Pour la suite, nous pourrons utiliser la NP-difficulté des problèmes suivants : Chemin Hamiltionien, circuit Hamiltonien, cycle Hamiltonien, Chaîne Hamiltionienne, Clique, Partition, 3-Dimensional Matching, X3-SAT.
+Pour la suite, nous pourrons utiliser la NP-difficulté des problèmes suivants : chemin Hamiltionien, circuit Hamiltonien, cycle Hamiltonien, chaîne Hamiltionienne, Clique, Partition, 3-Dimensional Matching, X3-SAT.
 
 Nom : **Clique**  
 Instance : un graphe fini $G(V, E)$, et un entier positif $C \leq |V|$  
