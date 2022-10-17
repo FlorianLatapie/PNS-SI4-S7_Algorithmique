@@ -228,17 +228,30 @@ Question : est-ce que la formule est satisfiable ?
 
 ## Exercice 3
 
-Définition (Sous-graphe) : Le sous-graphe de $G = (V,E)$ engendré par un sous-ensemble des sommets $S$ de $V$ est le graphe $GS$ dont les sommets sont les sommets de $S$ et les arêtes sont celles de $G$ dont les deux extrémités sont dans $S$.
+Définition (Sous-graphe) :  
+Le sous-graphe de $G = (V,E)$ engendré par un sous-ensemble des sommets $S$ de $V$ est le graphe $GS$ dont les sommets sont les sommets de $S$ et les arêtes sont celles de $G$ dont les deux extrémités sont dans $S$.
 
-Définition (Graphe partiel) : Le graphe partiel de $G = (V,E)$ engendré par un sous-ensemble $A$ de l’ensemble des arêtes de $G$ est le graphe obtenu de $G$ en retirant les arêtes de $E \backslash A$.
+Définition (Graphe partiel) :  
+Le graphe partiel de $G = (V,E)$ engendré par un sous-ensemble $A$ de l’ensemble des arêtes de $G$ est le graphe obtenu de $G$ en retirant les arêtes de $E \backslash A$.
 
-Définition (Sous-graphe partiel) : Le sous-graphe partiel de $G$ est le sous-graphe d’un graphe partiel de $G$.
+Définition (Sous-graphe partiel) :  
+Le sous-graphe partiel de $G$ est le sous-graphe d’un graphe partiel de $G$.
 
 Montrer que le problème Isomorphisme de sous-graphes est NP-difficile.
 
 Nom : **Isomorphisme de sous-graphes**  
 Instance : deux graphes finis $G_1$ et $G_2$  
 Question : $G_1$ contient-il un sous-graphe isomorphe à $G_2$ ?
+
+Clique $\propto$ Isomorphisme de sous-graphes (ISG)
+
+$G = <V, E> \Rightarrow G_1<V_1, E_1>$  
+$C \in \mathbb{N} \Rightarrow C_2<V_2, E_2>$
+
+$G = G_1$  
+$G_2$ = graphe complet à C sommets 
+
+---
 
 ## Exercice 4
 
