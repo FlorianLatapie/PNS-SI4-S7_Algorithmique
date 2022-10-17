@@ -144,12 +144,12 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 
     ```mermaid
     graph LR
-        a((a)) --> c
-        b((b)) --> c
-        c((c)) --> d
+        a(( )) --> c
+        b(( )) --> c
+        c(( )) --> d
         c --> e
-        d((d)) --> a
-        e((e)) --> b
+        d(( )) --> a
+        e(( )) --> b
     ```
 
     on obtient :
@@ -249,7 +249,7 @@ $G = <V, E> \Rightarrow G_1<V_1, E_1>$
 $C \in \mathbb{N} \Rightarrow C_2<V_2, E_2>$
 
 $G = G_1$  
-$G_2$ = graphe complet à C sommets 
+$G_2$ = graphe complet à C sommets
 
 ---
 
