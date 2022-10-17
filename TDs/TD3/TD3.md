@@ -18,7 +18,7 @@ graph LR
 
 La réponse est donc oui.
 
-* Algorithme de vérificatio d'une solution en temps polynomial
+* Algorithme de vérification d'une solution en temps polynomial
 Somme des éléments en entrée d'une taille $n$, complexité en temps $O(n)$
 
 Le problème est donc NP
@@ -27,72 +27,72 @@ Le problème est donc NP
 
 Soient les problèmes suivants.
 
-Nom : **Chaîneham**
+Nom : **Chaîne Hamiltionienne**
 Instance : Un graphe fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
 Question : Le graphe admet-il une chaîne Hamiltonienne (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
 
-Nom : **Cycleham**
+Nom : **cycle Hamiltonien**
 Instance : Un graphe fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
 Question : Le graphe admet-il un cycle Hamiltonien (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
 
-Nom : **Cheminham**
+Nom : **Chemin Hamiltionien**
 Instance : Un graphe orienté fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
 Question : Le graphe admet-il un chemin Hamiltonienne (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
 
-Nom : **Circuitham**
+Nom : **circuit Hamiltonien**
 Instance : Un graphe orienté fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
 Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
 
 ## Exercice 2
 
-1. Cheminham $\propto$ Circuitham
-2. Cycleham $\propto$ Circuitham
-3. Chaîneham $\propto$ Cheminham
-4. Cycleham $\propto$ Chaîneham
-5. Circuitham $\propto$ Cheminham
-6. Circuitham $\propto$ Cycleham
-7. Cheminham $\propto$ Chaîneham
+1. Chemin Hamiltionien $\propto$ circuit Hamiltonien
+2. cycle Hamiltonien $\propto$ circuit Hamiltonien
+3. Chaîne Hamiltionienne $\propto$ Chemin Hamiltionien
+4. cycle Hamiltonien $\propto$ Chaîne Hamiltionienne
+5. circuit Hamiltonien $\propto$ Chemin Hamiltionien
+6. circuit Hamiltonien $\propto$ cycle Hamiltonien
+7. Chemin Hamiltionien $\propto$ Chaîne Hamiltionienne
 
 ### Réponse exercice 2
 
-1. Cheminham $\propto$ Circuitham  
+1. Chemin Hamiltionien $\propto$ circuit Hamiltonien  
     Pour tout $G = (V, E) \xrightarrow[\text{Transformation polynomiale}]{} G' = (V', E')$
 
     $V' = V \cup \{x_0\}$  
     $E' = E \cup \{(x, v), (v, x), v \in V\}$
 
-    "$\Rightarrow$" On suppose qu'il existe un chemin Hamiltonien dans $G$  
+    $\Rightarrow$ On suppose qu'il existe un chemin Hamiltonien dans $G$  
     Soit $(v_0, v_1, \dots, v_n)$ avec $n = |V|$ ce chemin.  
     Construisons un circuit dans $G' : (x, v_0, v_1, \dots, v_n, x)$ car $(x, v_0)$ et $(v_n, x)$ sont des arcs de $E$
 
-    "$\Leftarrow$" S'il existe un circuitham de $G'$, alors en enelvant les arcs $x$ de ce circuit, on obtient un Cheminham dans G.
+    $\Leftarrow$ S'il existe un circuit Hamiltonien de $G'$, alors en enelvant les arcs $x$ de ce circuit, on obtient un Chemin Hamiltionien dans G.
 
-    On a montré que : s'il existe un Cheminham dans G si et seulement si il existe un circuit hamiltonien dans $G$.
+    On a montré que : s'il existe un Chemin Hamiltionien dans G si et seulement si il existe un circuit hamiltonien dans $G$.
 
-    Donc Cheminham $\propto$ Circuitham
+    Donc Chemin Hamiltionien $\propto$ circuit Hamiltonien
 
-2. Cycleham $\propto$ Circuitham  
+2. cycle Hamiltonien $\propto$ circuit Hamiltonien  
     Pour tout $G = (V, E)$
 
     $V' = V$  
     $E' = E \cup \{(v_0, v_1), \exists v_0, v_1 \in V, (v_0, v_1) \in E\}$
 
-    "$\Rightarrow$" On suppose qu'il existe un cycleham dans $G$ alors on a un circuitham dans $G'$ car les arcs du cycle dans $G$ sont symétriques.
+    $\Rightarrow$ On suppose qu'il existe un cycle Hamiltonien dans $G$ alors on a un circuit Hamiltonien dans $G'$ car les arcs du cycle dans $G$ sont symétriques.
 
-    "$\Leftarrow$" On suppose qu'il existe un cycleham dans $G'$ alors on a un circuitham dans $G$
+    $\Leftarrow$ On suppose qu'il existe un cycle Hamiltonien dans $G'$ alors on a un circuit Hamiltonien dans $G$
 
-    Donc Cycleham $\propto$ Circuitham
+    Donc cycle Hamiltonien $\propto$ circuit Hamiltonien
 
-3. Chaîneham $\propto$ Cheminham
+3. Chaîne Hamiltionienne $\propto$ Chemin Hamiltionien
     Même transformation que dans la questions 2  
-    Donc Chaîneham $\propto$ Cheminham
+    Donc Chaîne Hamiltionienne $\propto$ Chemin Hamiltionien
 
-4. Cycleham $\propto$ Chaîneham  
+4. cycle Hamiltonien $\propto$ Chaîne Hamiltionienne  
     Pour tout $G = (V, E)$  
     $V' = V \cup \{x', y, y'\}$  
     $E' = E \cup \{(y, v), v \in N_g(v)\} \cup \{x,x'\} \cup \{y, y'\}$
 
-    "$\Rightarrow$" Soit $(x, v_1, \dots, v_{n-1})$ un cycleham dans $G$ $n = |V|$
+    $\Rightarrow$ Soit $(x, v_1, \dots, v_{n-1})$ un Cycle Hamiltonien dans $G$ $n = |V|$
 
     Considérons la chaine suivante : $(x', x, v_1, \dots, v_{n-1}, y, y')$
     Cette chaine est hamiltonienne car :
@@ -102,12 +102,33 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
     * $\{v_{n-1}, y\} \in E'$ car les voisins de $x$ sont les voisins de $y$
     * $\{y, y'\} \in E'$
 
-    "$\Leftarrow$" S'il existe une chaine hamiltonienne dans $G'$ donc les deux extrémités sont $x'$ et $y'$  
-    Soit $(x', x, v_1, \dots, v_{n-1}, y, y')$ une chaine hamiltonienne comme $\{\}$
+    $\Leftarrow$ S'il existe une chaine Hamiltonienne dans $G'$, dont les deux extrémités sont $x'$ et $y'$.  
+    Soit $(x', x, v_1, \dots, v_{n-1}, y, y')$ une chaine hamiltonienne  
+    Comme $\{y, v_{n-1}\}$  
+    Donc $\{v_n, v_{n-1}\} \in E$  
+    Finalement $(x, v_1, \dots, v_{n-1})$ est un Cycle Hamiltonien de $G$
+5. Circuit Hamiltonien $\propto$ Chemin Hamiltonien  
+    Pour tout $G = (V, E)$  
+    $V' = V \cup \{x, z\}$  
+    $E' = E \cup \{(y, v), v \in N_{G,S}(v)\} \cup \{x, z\}$
+    $\Rightarrow$ Soit $(x, v_1, \dots, v_{n-1})$ un Circuit Hamiltonien de $G$  
+    Le chemin $(y, v_1, \dots, v_{n-1}, x, z)$ est hamiltonien car :
+    * $(y, v_1) \in E'$ car $(x, v_1) \in E'$ par hypothèse
+    * $(x, z) \in E'$
+    $\Leftarrow$ Soit $(y, v_1, \dots, v_{n-1}, x, z)$ un chemin hamiltonien  
+    On montre que $(x, v_1, \dots, v_{n-1}, x)$ est un Circuit Hamiltonien de car $(x, v_1) \in E'$ par construction de $G'$  
+    (les voisins sortant de $y$ sont les voisins sortants de $x$)
+
+Méthodologie pour "Q NP-Complet ?"
+
+$P \propto Q$, $P$ NP-Complet  
+$\Rightarrow$ si P est vrai alors Q est vrai  
+$\Rightarrow$ si P est faux alors Q est faux  
+$\Rightarrow$ Réduction en temps polynomial
 
 ---
 
-Pour la suite, nous pourrons utiliser la NP-difficulté des problèmes suivants : Cheminham, Circuitham, Cycleham, Chaîneham, Clique, Partition, 3-Dimensional Matching, X3-SAT.
+Pour la suite, nous pourrons utiliser la NP-difficulté des problèmes suivants : Chemin Hamiltionien, circuit Hamiltonien, cycle Hamiltonien, Chaîne Hamiltionienne, Clique, Partition, 3-Dimensional Matching, X3-SAT.
 
 Nom : **Clique**  
 Instance : un graphe fini $G(V, E)$, et un entier positif $C \leq |V|$  
