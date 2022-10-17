@@ -187,6 +187,8 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 
     ```
 
+    ![image](./r%C3%A9ponse%202.6.jpg)
+
     Transformation d'un graphe dirigé en un graphe non dirigé :
 
     - On transforme chaque noeud du problème initial en 3 noeuds : un qui gère les entrées, un qui gère les sorties et un dernier au milieu reliant les deux précédents. Ce dernier noeud permet de bien vérifier une entrée puis une sortie.
@@ -243,6 +245,8 @@ Nom : **Isomorphisme de sous-graphes**
 Instance : deux graphes finis $G_1$ et $G_2$  
 Question : $G_1$ contient-il un sous-graphe isomorphe à $G_2$ ?
 
+### Réponse
+
 Clique $\propto$ Isomorphisme de sous-graphes (ISG)
 
 $G = <V, E> \Rightarrow G_1<V_1, E_1>$  
@@ -261,6 +265,15 @@ Nom : **Isomorphisme de sous-graphes partiels**
 Instance : deux graphes finis $G_1$ et $G_2$  
 Question : $G_1$ contient-il un sous-graphe partiel isomorphe à $G_2$ ?
 
+### Réponse
+
+Cycle Hamiltonien $\propto$ Isomorphisme de sous-graphes partiels (ISGP)
+
+$G = <V, E> \Rightarrow G_1 = G$  
+$G_2 =$ Cycle a $|V|$ Sommets
+
+---
+
 ## Exercice 5
 
 Montrer que le problème Arbre couvrant de degré borné est NP-difficile.
@@ -268,6 +281,15 @@ Montrer que le problème Arbre couvrant de degré borné est NP-difficile.
 Nom : **Arbre couvrant de degré borné**  
 Instance : $G$ et un entier $k$  
 Question : Existe-t-il un arbre couvrant de degré au plus k ?
+
+### Réponse
+
+Chaine Hamiltonienne $\propto$ Arbre
+
+$G = <V, E> \Rightarrow G' = G$  
+$k = 2$
+
+---
 
 ## Exercice 6
 
