@@ -55,7 +55,7 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 
 ### Réponses exercice 2
 
-1. Chemin Hamiltionien $\propto$ circuit Hamiltonien  
+1. **Chemin Hamiltionien $\propto$ circuit Hamiltonien**  
     Pour tout $G = (V, E) \xrightarrow[\text{Transformation polynomiale}]{} G' = (V', E')$
 
     $V' = V \cup \{x_0\}$  
@@ -71,7 +71,7 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 
     Donc chemin Hamiltionien $\propto$ circuit Hamiltonien
 
-2. cycle Hamiltonien $\propto$ circuit Hamiltonien  
+2. **Cycle Hamiltonien $\propto$ circuit Hamiltonie**n  
     Pour tout $G = (V, E)$
 
     $V' = V$  
@@ -83,11 +83,11 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 
     Donc cycle Hamiltonien $\propto$ circuit Hamiltonien
 
-3. Chaîne Hamiltionienne $\propto$ chemin Hamiltionien
+3. **Chaîne Hamiltionienne $\propto$ chemin Hamiltionien**
     Même transformation que dans la questions 2  
     Donc chaîne Hamiltionienne $\propto$ chemin Hamiltionien
 
-4. Cycle Hamiltonien $\propto$ chaîne Hamiltionienne  
+4. **Cycle Hamiltonien $\propto$ chaîne Hamiltionienne**  
     Pour tout $G = (V, E)$  
     $V' = V \cup \{x', y, y'\}$  
     $E' = E \cup \{(y, v), v \in N_g(v)\} \cup \{x,x'\} \cup \{y, y'\}$
@@ -107,7 +107,7 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
     Comme $\{y, v_{n-1}\}$  
     Donc $\{v_n, v_{n-1}\} \in E$  
     Finalement $(x, v_1, \dots, v_{n-1})$ est un Cycle Hamiltonien de $G$
-5. Circuit Hamiltonien $\propto$ chemin Hamiltonien  
+5. **Circuit Hamiltonien $\propto$ chemin Hamiltonien**  
     Pour tout $G = (V, E)$  
     $V' = V \cup \{x, z\}$  
     $E' = E \cup \{(y, v), v \in N_{G,S}(v)\} \cup \{x, z\}$
