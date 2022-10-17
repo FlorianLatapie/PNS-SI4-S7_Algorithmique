@@ -82,11 +82,11 @@ en un temps `c T(n)`
 
 - Nom : Sac a dos (Knapsack)
 - Données :
-    - ensemble fini d'objets $E$
-    - une fonction entière $v$ qui associe une valeur à chaque objet
-    - une fonction entière $p$ qui associe un poids à chaque objet
-    - un poids total $P$
-    - une valeur totale minimale $V$
+  - ensemble fini d'objets $E$
+  - une fonction entière $v$ qui associe une valeur à chaque objet
+  - une fonction entière $p$ qui associe un poids à chaque objet
+  - un poids total $P$
+  - une valeur totale minimale $V$
 - Question : pouvons-nous choisir des objets de manière à ne pas dépasser le poids total $P$ et à avoir une valeur
   totale au moins $V$ ?
 
@@ -156,9 +156,55 @@ Un problème $\Pi$ est NP-complet si et seulement si (classe les plus difficiles
 
 - $\Pi$ est dans NP  
   Comment ?
-    - Machine de Turing non déterministe
-    - On peut vérifier une solution en un temps polynomial
+  - Machine de Turing non déterministe
+  - On peut vérifier une solution en un temps polynomial
 
 - Tout problème $\Pi'$ dans NP peut être réduit polynomialement à $\Pi$
   Comment ?
-    - On trouve un problème $\Pi'$ qui est NP-Complet et tel qu'il existe $\Pi' \propto \Pi$
+  - On trouve un problème $\Pi'$ qui est NP-Complet et tel qu'il existe $\Pi' \propto \Pi$
+
+# 17/10/2022
+
+Problème Partition :
+Partition est NP-Complet
+
+- Partition est dans NP :
+On peut vérifier une solution en temps polynomial.
+
+##  3DM
+
+- 3DM
+- Entrée :  
+  $X = \{x_1, x_2, ..., x_t\}$, $t = |X| = |Y| = |Z|$  
+  $Y = \{y_1, y_2, ..., y_t\}$  
+  $Z = \{z_1, z_2, ..., z_t\}$
+
+  $M$ un ensemble de triplets dans $X \times Y \times Z$  
+  Un triplet (x,y,z) avec $x \in X$, $y \in Y$, $z \in Z$
+- Question : Existe-t-il $M' \subseteq M$ tel que $|M'| = t$ et $U_{i=1}^{t} \{n_i\} = X \times Y \times Z$ avec $M = \{n_1, n_2, ..., n_t\}$
+
+3DM $\propto$ Partition
+
+Nimporte quelle instance et 3DM
+
+$X, Y, Z$  
+$M$  
+$k = |M|$
+
+$\xrightarrow[\text{Transformation polynomiale}]{}$
+
+Chaque $a_i \in A sera donc composé de $3tp$ chiffres binaires
+$p = \lceil log_2(k + 1) \rceil$  
+$|A| = k+2$
+
+Exemple :
+
+$x_1, y_1, z_1$
+
+|001|000|000|000|001|000|000|000|001| $(3tp)$
+|---|---|---|---|---|---|---|---|---|---|
+|$x_1$|$x_2$|$x_3$|$y_1$|$y_2$|$y_3$|$z_1$|$z_2$|$z_3$|
+
+$B = 001001001\dots$ (taille $3tp$)  
+$a_{k+1} = 2S - B$  
+$a_{k+2} = S + B$
