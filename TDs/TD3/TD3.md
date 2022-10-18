@@ -58,7 +58,7 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 1. **Chemin Hamiltionien $\propto$ circuit Hamiltonien**  
     Pour tout $G = (V, E) \xrightarrow[\text{Transformation polynomiale}]{} G' = (V', E')$
 
-    $V' = V \cup \{x_0\}$  
+    $V' = V \cup x$  
     $E' = E \cup \{(x, v), (v, x), v \in V\}$
 
     $\Rightarrow$ On suppose qu'il existe un chemin Hamiltonien dans $G$  
