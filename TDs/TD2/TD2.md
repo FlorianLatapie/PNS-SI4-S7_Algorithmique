@@ -8,25 +8,6 @@ reconnaît le langage des mots composés d’un nombre en binaire qui contient e
 Exemples de mots du langage : 11011111 ; 101111111 ; 11111101 ; 101
 
 ```mermaid
-graph TB
-    q0((q0)) --> | 1/1/D | q1
-    q1((q1)) --> | 1/1/D | q1
-    q1((q1)) --> | 0/0/D | q2
-    q2((q2)) --> | 1/1/D | q3
-    q3((q3)) --> | 1/1/D | q3
-    q3((q3)) --> | B/B/S | qf
-
-    %% etat poubelle
-    poubelle((poubelle))
-    q0((q0)) --> | 0/0/S<br/>B/B/S | poubelle
-    q1((q1)) --> | B/B/S | poubelle
-    q2((q2)) --> | 0/0/S<br/>B/B/S | poubelle
-    q3((q3)) --> | 0/0/S | poubelle
-```
-
-Sans l'état poubelle
-
-```mermaid
 graph LR
     q0((q0)) --> | 1/1/D | q1
     q1((q1)) --> | 1/1/D | q1
