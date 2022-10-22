@@ -23,6 +23,18 @@ graph TB
     q3((q3)) --> | 0/0/S | poubelle((poubelle))
 ```
 
+Sans l'état poubelle
+
+```mermaid
+graph LR
+    q0((q0)) --> | 1/1/D | q1((q1))
+    q1((q1)) --> | 1/1/D | q1((q1))
+    q1((q1)) --> | 0/0/D | q2((q2))
+    q2((q2)) --> | 1/1/D | q3((q3))
+    q3((q3)) --> | 1/1/D | q3((q3))
+    q3((q3)) --> | B/B/S | qf((qf))
+```
+
 ## Exercice 2
 
 Décrire de manière détaillée une machine de Turing déterministe à deux rubans qui reconnaît
