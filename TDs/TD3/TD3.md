@@ -301,6 +301,8 @@ Instance : $P$ un ensemble de pannes possibles, $C$ une famille de sous-ensemble
 Question : Existe-t-il un sous-famille de tests $C'$ de cardinalité au plus $J$ telle que pour toute
 paire $p_i$, $p_j$ de pannes, il existe $c \in C'$ un test tel que $|\{p_i, p_j\} \cap c | = 1$. En d’autres termes, existe-t-il un test qui permette de distinguer la panne $p_i$ de la panne $p_j$ (pour tout $i$ et $j$).
 
+---
+
 ## Exercice 8
 
 Montrer que le problème Score est NP-difficile.
@@ -309,6 +311,8 @@ Nom : **Score**
 Instance : $G = (V, E)$ un graphe arête-pondéré non orienté dont les poids des arêtes sont des entiers non négatifs, $u$ et $v$ deux sommets et $S$ un entier.  
 Question : Existe-t-il une chaîne simple de $u$ à $v$ de poids supérieur ou égal à $S$ ?
 
+---
+
 ## Exercice 9
 
 Montrer que le problème 3-Partition est NP-difficile.
@@ -316,6 +320,8 @@ Montrer que le problème 3-Partition est NP-difficile.
 Nom : **3-Partition**  
 Instance : A un ensemble fini d’entiers non-négatifs  
 Question : Existe-t-il une partition de $A$ en $A1$, $A2$ et $A3$ en trois ensembles de somme égale ?
+
+---
 
 ## Exercice 10
 
