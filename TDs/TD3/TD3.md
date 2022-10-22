@@ -10,16 +10,18 @@ Montrer que Somme de Sous-Ensembles est dans NP en décrivant une machine de Tur
 
 ### Réponse exercice 1
 
-```mermaid
-graph LR
+- Machine de Turing non déterministe.  
+  On fait une machine de Turing à 3 états on prend l'élément et on ne prend pas l'élément, ainsi que l'état initial.
+  À chaque élément de e on fait respectivement les deux choix. Si sur le deuxième on a 0 la réponse est oui.
+
+  ```mermaid
+  graph LR
     a(( )) --> | je choisis e | b(( ))
     a(( )) --> | je ne choisis pas e | c(( ))
-```
+  ```
 
-La réponse est donc oui.
-
-- Algorithme de vérification d'une solution en temps polynomial
-Somme des éléments en entrée d'une taille $n$, complexité en temps $O(n)$
+- Algorithme de vérification d'une solution en temps polynomial.  
+  Somme des éléments en entrée d'une taille $n$, complexité en temps $O(n)$
 
 Le problème est donc NP
 
@@ -27,20 +29,20 @@ Le problème est donc NP
 
 Soient les problèmes suivants.
 
-Nom : **Chaîne Hamiltionienne**
-Instance : Un graphe fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
+Nom : **Chaîne Hamiltionienne**  
+Instance : Un graphe fini $G = (V, E)$ représenté sous forme de listes d’adjacence.  
 Question : Le graphe admet-il une chaîne Hamiltonienne (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
 
-Nom : **Cycle Hamiltonien**
-Instance : Un graphe fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
+Nom : **Cycle Hamiltonien**  
+Instance : Un graphe fini $G = (V, E)$ représenté sous forme de listes d’adjacence.  
 Question : Le graphe admet-il un cycle Hamiltonien (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
 
-Nom : **Chemin Hamiltionien**
-Instance : Un graphe orienté fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
-Question : Le graphe admet-il un chemin Hamiltonienne (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
+Nom : **Chemin Hamiltionien**  
+Instance : Un graphe orienté fini $G = (V, E)$ représenté sous forme de listes d’adjacence.  
+Question : Le graphe admet-il un chemin Hamiltonien (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
 
-Nom : **Circuit Hamiltonien**
-Instance : Un graphe orienté fini $G = (V, E)$ représenté sous forme de listes d’adjacence.
+Nom : **Circuit Hamiltonien**  
+Instance : Un graphe orienté fini $G = (V, E)$ représenté sous forme de listes d’adjacence.  
 Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe une et une seule fois par tous les sommets) ?
 
 ## Exercice 2
@@ -53,29 +55,36 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 6. Circuit Hamiltonien $\propto$ cycle Hamiltonien
 7. Chemin Hamiltionien $\propto$ chaîne Hamiltionienne
 
+## Méthodologie pour "Q NP-Complet ?"
+
+$P \propto Q$, $P$ NP-Complet  
+$\Rightarrow$ si P est vrai alors Q est vrai  
+$\Rightarrow$ si P est faux alors Q est faux  
+$\Rightarrow$ Réduction en temps polynomial
+
 ### Réponses exercice 2
 
 1. **Chemin Hamiltionien $\propto$ circuit Hamiltonien**  
     Pour tout $G = (V, E) \xrightarrow[\text{Transformation polynomiale}]{} G' = (V', E')$
 
-    $V' = V \cup x$  
-    $E' = E \cup \{(x, v), (v, x), v \in V\}$
+    $V' = V \cup \{x_0\}$  
+    $E' = E \cup \{(x_0, v), (v, x_0), v \in V\}$
 
     $\Rightarrow$ On suppose qu'il existe un chemin Hamiltonien dans $G$  
     Soit $(v_0, v_1, \dots, v_n)$ avec $n = |V|$ ce chemin.  
-    Construisons un circuit dans $G' : (x, v_0, v_1, \dots, v_n, x)$ car $(x, v_0)$ et $(v_n, x)$ sont des arcs de $E$
+    Construisons un circuit dans $G' : (x_0, v_0, v_1, \dots, v_n, x)$ car $(x_0, v_0)$ et $(v_n, x_0)$ sont des arcs de $E$
 
-    $\Leftarrow$ S'il existe un circuit Hamiltonien de $G'$, alors en enelvant les arcs $x$ de ce circuit, on obtient un chemin Hamiltionien dans G.
+    $\Leftarrow$ S'il existe un circuit Hamiltonien de $G'$, alors en enelvant l'arc $x_0$ de ce circuit, on obtient un chemin Hamiltionien dans G.
 
-    On a montré que : s'il existe un chemin Hamiltionien dans G si et seulement si il existe un circuit hamiltonien dans $G$.
+    On a montré qu'il existe un chemin Hamiltionien dans $G$ si et seulement s'il existe un circuit hamiltonien dans $G$.
 
     Donc chemin Hamiltionien $\propto$ circuit Hamiltonien
 
-2. **Cycle Hamiltonien $\propto$ circuit Hamiltonie**n  
+2. **Cycle Hamiltonien $\propto$ circuit Hamiltonien**  
     Pour tout $G = (V, E)$
 
     $V' = V$  
-    $E' = E \cup \{(v_0, v_1), \exists v_0, v_1 \in V, (v_0, v_1) \in E\}$
+    $E' = E \cup \{(v_0, v_1), \exists v_0, v_1 \in V, (v_1, v_0) \in E\}$
 
     $\Rightarrow$ On suppose qu'il existe un cycle Hamiltonien dans $G$ alors on a un circuit Hamiltonien dans $G'$ car les arcs du cycle dans $G$ sont symétriques.
 
@@ -83,18 +92,18 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 
     Donc cycle Hamiltonien $\propto$ circuit Hamiltonien
 
-3. **Chaîne Hamiltionienne $\propto$ chemin Hamiltionien**
-    Même transformation que dans la questions 2  
+3. **Chaîne Hamiltionienne $\propto$ chemin Hamiltionien**  
+    Même transformation que dans la question 2  
     Donc chaîne Hamiltionienne $\propto$ chemin Hamiltionien
 
 4. **Cycle Hamiltonien $\propto$ chaîne Hamiltionienne**  
     Pour tout $G = (V, E)$  
     $V' = V \cup \{x', y, y'\}$  
-    $E' = E \cup \{(y, v), v \in N_g(v)\} \cup \{x,x'\} \cup \{y, y'\}$
+    $E' = E \cup \{(y, v), v \in N_g(x)\} \cup \{x,x'\} \cup \{y, y'\}$
 
     $\Rightarrow$ Soit $(x, v_1, \dots, v_{n-1})$ un Cycle Hamiltonien dans $G$ $n = |V|$
 
-    Considérons la chaine suivante : $(x', x, v_1, \dots, v_{n-1}, y, y')$
+    Considérons la chaine suivante : $(x', x, v_1, \dots, v_{n-1}, y, y')$  
     Cette chaine est hamiltonienne car :
     - $\{x', x\} \in E'$
     - $\{x, v_1\} \in E'$
@@ -104,18 +113,19 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 
     $\Leftarrow$ S'il existe une chaine Hamiltonienne dans $G'$, dont les deux extrémités sont $x'$ et $y'$.  
     Soit $(x', x, v_1, \dots, v_{n-1}, y, y')$ une chaine hamiltonienne  
-    Comme $\{y, v_{n-1}\}$  
-    Donc $\{v_n, v_{n-1}\} \in E$  
+    Comme $\{y, v_{n-1}\} \in E'$  
+    Donc $\{x, v_{n-1}\} \in E$  
     Finalement $(x, v_1, \dots, v_{n-1})$ est un Cycle Hamiltonien de $G$
 
 5. **Circuit Hamiltonien $\propto$ chemin Hamiltonien**  
     Pour tout $G = (V, E)$  
-    $V' = V \cup \{x, z\}$  
-    $E' = E \cup \{(y, v), v \in N_{G,S}(v)\} \cup \{x, z\}$
+    $V' = V \cup \{y, z\}$  
+    $E' = E \cup \{(y, v), v \in N_{G,S}(x)\} \cup \{x, z\}$  
     $\Rightarrow$ Soit $(x, v_1, \dots, v_{n-1})$ un circuit Hamiltonien de $G$  
     Le chemin $(y, v_1, \dots, v_{n-1}, x, z)$ est hamiltonien car :
     - $(y, v_1) \in E'$ car $(x, v_1) \in E'$ par hypothèse
-    - $(x, z) \in E'$
+    - $(x, z) \in E'$  
+
     $\Leftarrow$ Soit $(y, v_1, \dots, v_{n-1}, x, z)$ un chemin hamiltonien  
     On montre que $(x, v_1, \dots, v_{n-1}, x)$ est un circuit Hamiltonien de car $(x, v_1) \in E'$ par construction de $G'$  
     (les voisins sortant de $y$ sont les voisins sortants de $x$)
@@ -142,51 +152,6 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 
     Si on a un circuit alors il y a forcément un cycle :
 
-    ```mermaid
-    graph LR
-        a(( )) --> c
-        b(( )) --> c
-        c(( )) --> d
-        c --> e
-        d(( )) --> a
-        e(( )) --> b
-    ```
-
-    on obtient :
-
-    ```mermaid
-    graph LR
-        a(( )) --- a1
-        a1(( )) --- a2
-        a2(( )) --- d
-        
-        b(( )) --- c2
-        b1(( )) --- b
-        b2(( )) --- b1
-        
-        c(( )) --- c1
-        c --- e2
-        c1(( )) --- c2
-        c2(( )) --- a
-        
-        
-        d(( )) --- d1
-        d1(( )) --- d2
-        d2(( )) --- c
-
-        e(( )) --- b2
-        e1(( )) --- e
-        e2(( )) --- e1
-
-
-        style a fill:#00F
-        style b fill:#00F
-        style c fill:#00F
-        style d fill:#00F
-        style e fill:#00F
-
-    ```
-
     ![image](./r%C3%A9ponse%202.6.jpg)
 
     Transformation d'un graphe dirigé en un graphe non dirigé :
@@ -196,17 +161,9 @@ Question : Le graphe admet-il un circuit Hamiltonien (c’est-à-dire qui passe 
 
 7. **Circuit Hamiltonien $\propto$ chemin Hamiltonien**  
     Deux possibilités :
-    - faire la même transformation que dans la question 6
-    - Utiliser la transitivité
-
-    Chemin Hamiltonien $\propto$ Circuit Hamiltonien $\propto$ Cycle Hamiltonien $\propto$ Chaîne Hamiltonienne
-
-Méthodologie pour "Q NP-Complet ?"
-
-$P \propto Q$, $P$ NP-Complet  
-$\Rightarrow$ si P est vrai alors Q est vrai  
-$\Rightarrow$ si P est faux alors Q est faux  
-$\Rightarrow$ Réduction en temps polynomial
+    - Faire la même transformation que dans la question 6
+    - Utiliser la transitivité :  
+        Chemin Hamiltonien $\propto$ Circuit Hamiltonien $\propto$ Cycle Hamiltonien $\propto$ Chaîne Hamiltonienne
 
 ---
 
@@ -218,7 +175,7 @@ Question : le graphe admet-il une clique (sous-graphe complet) de cardinalité a
 
 Nom : **Partition**  
 Instance : un ensemble fini d'entiers non-négatifs $A$.  
-Question : existe-t-il une partition de $A$ en deux ensembles $A'$ et $A"$, telle que la somme des éléments de $A'$ soit égale à la somme des éléments de $A"$ ?
+Question : existe-t-il une partition de $A$ en deux ensembles $A'$ et $A''$, telle que la somme des éléments de $A'$ soit égale à la somme des éléments de $A''$ ?
 
 Nom : **3-Dimensional Matching**  
 Instance : un ensemble $M$ de triplets $(w, x, y)$, avec $w$, $x$ et $y$ des éléments de trois ensembles $W$, $X$, $Y$ de même cardinalité $q$.  
@@ -228,16 +185,20 @@ Nom : **X3-SAT**
 Instance : une formule logique sous forme normale conjonctive, composée de clauses de degré exactement 3.  
 Question : est-ce que la formule est satisfiable ?
 
-## Exercice 3
+---
 
-Définition (Sous-graphe) :  
-Le sous-graphe de $G = (V,E)$ engendré par un sous-ensemble des sommets $S$ de $V$ est le graphe $GS$ dont les sommets sont les sommets de $S$ et les arêtes sont celles de $G$ dont les deux extrémités sont dans $S$.
+**Définition (Sous-graphe) :**  
+Le sous-graphe de $G = (V,E)$ engendré par un sous-ensemble des sommets $S$ de $V$ est le graphe $G_S$ dont les sommets sont les sommets de $S$ et les arêtes sont celles de $G$ dont les deux extrémités sont dans $S$.
 
-Définition (Graphe partiel) :  
+**Définition (Graphe partiel) :**  
 Le graphe partiel de $G = (V,E)$ engendré par un sous-ensemble $A$ de l’ensemble des arêtes de $G$ est le graphe obtenu de $G$ en retirant les arêtes de $E \backslash A$.
 
-Définition (Sous-graphe partiel) :  
+**Définition (Sous-graphe partiel) :**  
 Le sous-graphe partiel de $G$ est le sous-graphe d’un graphe partiel de $G$.
+
+---
+
+## Exercice 3
 
 Montrer que le problème Isomorphisme de sous-graphes est NP-difficile.
 
@@ -245,15 +206,18 @@ Nom : **Isomorphisme de sous-graphes**
 Instance : deux graphes finis $G_1$ et $G_2$  
 Question : $G_1$ contient-il un sous-graphe isomorphe à $G_2$ ?
 
-### Réponse
+### Réponse exercice 3
 
-Clique $\propto$ Isomorphisme de sous-graphes (ISG)
+Clique $\propto$ Isomorphisme de Sous-Graphes (ISG)
 
-$G = <V, E> \Rightarrow G_1<V_1, E_1>$  
-$C \in \mathbb{N} \Rightarrow C_2<V_2, E_2>$
-
-$G = G_1$  
-$G_2$ = graphe complet à C sommets
+$$
+\begin{align*}
+G = <V,E> &\Rightarrow{} G_1<V_1, E_1> \\
+C \in \mathbb{N} &\phantom{\Rightarrow{}} G_2<V_2, E_2> \\
+\phantom{} &\phantom{\Rightarrow{}} G = G_1 \\
+\phantom{} &\phantom{\Rightarrow{}} G_2 = \text{graphe complet à C sommets} \\
+\end{align*}
+$$
 
 ---
 
@@ -265,12 +229,16 @@ Nom : **Isomorphisme de sous-graphes partiels**
 Instance : deux graphes finis $G_1$ et $G_2$  
 Question : $G_1$ contient-il un sous-graphe partiel isomorphe à $G_2$ ?
 
-### Réponse
+### Réponse exercice 4
 
-Cycle Hamiltonien $\propto$ Isomorphisme de sous-graphes partiels (ISGP)
+Cycle Hamiltonien $\propto$ Isomorphisme de sous-graphes partiels (ISGP) (ou clique $\propto$ ISGP même demo que 3)
 
-$G = <V, E> \Rightarrow G_1 = G$  
-$G_2 =$ Cycle a $|V|$ Sommets
+$$
+\begin{align*}
+G = <V,E> &\Rightarrow{} G_1 = G \\
+\phantom{} &\phantom{\Rightarrow{}} G_2 = \text{cycle à |V| sommets}\\
+\end{align*}
+$$
 
 ---
 
@@ -282,12 +250,16 @@ Nom : **Arbre couvrant de degré borné**
 Instance : $G$ et un entier $k$  
 Question : Existe-t-il un arbre couvrant de degré au plus k ?
 
-### Réponse
+### Réponse exercice 5
 
 Chaine Hamiltonienne $\propto$ Arbre
 
-$G = <V, E> \Rightarrow G' = G$  
-$k = 2$
+$$
+\begin{align*}
+G = <V,E> &\Rightarrow{} G' = G \\
+\phantom{} &\phantom{\Rightarrow{}} k = 2 \\
+\end{align*}
+$$
 
 ---
 
@@ -298,6 +270,27 @@ Montrer que le problème Ordonnancement de tâches est NP-difficile.
 Nom : **Ordonnancement de tâches**  
 Instance : Soient $k$ tâches de durées respectives $t_1, \dots, t_k$ (durées entières), $T$ le temps total d’exécution autorisé et $n$ le nombre de processeurs.  
 Question : Est-il possible d’exécuter les $k$ tâches sur une machine à $n$ processeurs en moins de $T$ unités de temps ?
+
+### Réponse exercice 6
+
+Partition $\propto$ Ordonnancement de tâches
+
+$$
+\begin{align*}
+A' \subseteq A &\Rightarrow{} n = 2\\
+\sum_{a \in A'} a = \sum_{a \in A \backslash A'} a &\phantom{\Rightarrow{}} k = card(A)\\
+\phantom{} &\phantom{\Rightarrow{}} T = \frac{1}{2} \sum_{a \in A} a\\
+
+\end{align*}
+$$
+
+$\Rightarrow{}$ Soit $A \subseteq A$ tel que $\sum_{a \in A} a = \sum_{a \in A \backslash A'} a$  
+On construit une instance d'orderonnancement de tâches de la manière suivante :
+
+- Les tâches correspondantes aux éléments de $A'$ sont sur le cœur 1
+- Les tâches correspondantes aux éléments de $A \backslash A'$ sont sur le cœur 2
+
+---
 
 ## Exercice 7
 
