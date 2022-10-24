@@ -107,9 +107,9 @@ Est-ce qu'il existe un cycle qui permet de passer une fois et une seule par chaq
 
 Nous montrons que G admet une chaine hamiltonienne si et seulement si G' admet un cycle hamiltonien
 
-"$\Leftarrow$" : considérons un cycle hamiltonien de $G$ : "moins $x_0$"alors on obtient une chaine hamiltonienne de $G$
+$\Leftarrow$ : considérons un cycle hamiltonien de $G$ : "moins $x_0$" alors on obtient une chaine hamiltonienne de $G$
 
-"$\Rightarrow$" : Si G admet une chaine hamiltonienne, alors on ajoute 2 arêtes des extrémités de la chaine vers $x_0$
+$\Rightarrow$ : Si G admet une chaine hamiltonienne, alors on ajoute 2 arêtes des extrémités de la chaine vers $x_0$
 et on obtient un cycle hamiltonien dans $G'$ avec $x_0$
 
 Finalement, $p_1$ $\leq$ $p_2$
@@ -193,7 +193,7 @@ $k = |M|$
 
 $\xrightarrow[\text{Transformation polynomiale}]{}$
 
-Chaque $a_i \in A sera donc composé de $3tp$ chiffres binaires
+Chaque $a_i \in A$ sera donc composé de $3tp$ chiffres binaires
 $p = \lceil log_2(k + 1) \rceil$  
 $|A| = k+2$
 
