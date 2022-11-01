@@ -311,6 +311,26 @@ Nom : **Score**
 Instance : $G = (V, E)$ un graphe arête-pondéré non orienté dont les poids des arêtes sont des entiers non négatifs, $u$ et $v$ deux sommets et $S$ un entier.  
 Question : Existe-t-il une chaîne simple de $u$ à $v$ de poids supérieur ou égal à $S$ ?
 
+### Réponse exercice 8
+
+Chaine Hamiltonienne $\propto$ Score
+
+$f : G(V,E) \rightarrow G'(V',E'), u, v \in V', S \in \mathbb{N}$
+
+![image](./r%C3%A9ponse%208.jpg)
+
+$G'$ est composé de $G$ avec chacune des arrêtes de $G$ avec un poids de $1$.  
+On rajoute $2$ sommets à $G'$, $u$ et $v$, relisés à tous les sommets de $V$ avec un poids de $1$.  
+On prend $S = |V| - 1 + 2 = |V| + 1$.
+
+$$
+\begin{align*}
+\text{Chaine Hamiltonienne} &\Leftrightarrow \exists \text{ chemin Hamiltonien } (v1, \dots, v_n) \text{ dans } G \\
+&\Leftrightarrow \exists \text{ chemin } (u, v1, \dots, v_n, v) \text{ dans  G' avec un poids } S = |V| + 1 \\
+&\Leftrightarrow \text{Score } (G', u, v, S) \\
+\end{align*}
+$$
+
 ---
 
 ## Exercice 9
@@ -321,6 +341,35 @@ Nom : **3-Partition**
 Instance : A un ensemble fini d’entiers non-négatifs  
 Question : Existe-t-il une partition de $A$ en $A1$, $A2$ et $A3$ en trois ensembles de somme égale ?
 
+### Réponse exercice 9
+
+Partition $\propto$ 3-Partition
+
+$$
+\begin{align*}
+f : &A &\rightarrow & B\\
+&\{t_1, \dots, t_k\} &&B = A \cup \{s\} \text{ avec s} = \frac{1}{2}\sum_{a \in A}a\\
+\end{align*}
+$$
+
+$$
+\begin{align*}
+\text{Partition (A)} &\Leftrightarrow \exists \text{A', A'' une partition de A telle que }\sum_{a \in A'}a = \sum_{a \in A''}\\
+&\Rightarrow \exists B' = A', B'' = A'', B''' = \{s\}, \sum_{b \in B'}b = \sum_{b \in B''}b = \sum_{b \in B'''}b\\
+&\Rightarrow \text{3-Partition (B)}\\
+\end{align*}
+$$
+
+$$
+\begin{align*}
+\text{3-Partition (B)} &\Rightarrow \text{B', B'' et B'''} = \{s\} \text{ car }\sum_{b \in B} = 3S\\
+&\Rightarrow \text{B', B'' est une partition équilibrée de B\textbackslash\{s\} = A}\\
+&\Rightarrow \text{A' = B' et A'' = B'' est une partition de A } (\sum_{a \in A'}a = \sum_{a \in A''})\\
+&\Rightarrow \text{Partition (A)}\\
+\end{align*}
+$$
+
+
 ---
 
 ## Exercice 10
@@ -330,3 +379,26 @@ Montrer que le problème Somme de sous-ensembles est NP-difficile (en utilisant 
 Nom : **Somme de sous-ensembles**  
 Instance : Un ensemble A d’entiers non négatifs et un entier $C$  
 Question : Existe-t-il un sous-ensemble de A qui somme à $C$ ?  
+
+### Réponse exercice 10
+
+X3-SAT $\propto$ Somme de sous-ensembles
+
+$f : \mu : ((\lambda_1 \lor \lnot \lambda_2 \lor \lnot \lambda_3) \land \dots ) \rightarrow \exists A \in \mathbb{N}^*, C \in \mathbb{N}$
+
+$|\mu| = m$  
+$|\lambda| = n$
+
+$ \mu_1 = \lambda_1 \lor \lnot \lambda_2$
+
+<!-- align left -->
+$$
+\begin{aligned}
+\lambda_1 &\rightarrow a_1 = 2^1 + 2^{n+1} \\
+\lnot \lambda_1 &\rightarrow \lnot a_1 = 2^1 \\
+\lambda_2 &\rightarrow a_2 = 2^2 + 2^{n+2} \\
+\lnot \lambda_2 &\rightarrow \lnot a_2 = 2^2 + 2^{n+1} \\
+\end{aligned}
+$$
+
+$c = \sum_{i=1}^n 2^i + \sum_{i=1}^m 2^{n+2i}$
