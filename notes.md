@@ -1,11 +1,15 @@
 # Cours algorithmique et complexité
 
-# 12/09/2022
+---
+
+## 12/09/2022
 
 - mail du prof : dorian.mazauric@inria.fr
 - mail prof de td : bridoux@i3s.unice.fr
 
-# 19/09/2022
+---
+
+## 19/09/2022
 
 ## Machine de Turing
 
@@ -39,7 +43,9 @@ ruban 1 : ... | K | A | Y | A | K | ...
 
 ruban 2 : ... | B | B | B | B | B | ...$
 
-# 26/09/2022
+---
+
+## 26/09/2022
 
 Temps de calcul d'une machine de Turing (MT), est une fonction de T(n) avec n la taille des données
 
@@ -70,7 +76,9 @@ en un temps `c T(n)`
    $\Rightarrow \frac{8T(n)}{m} < \frac{c}{2}n < c T(n) - 2n$  
    pour `n` suffisamment grand.
 
-# 03/10/2022
+---
+
+## 03/10/2022
 
 ## Manière de formaliser un problème
 
@@ -114,12 +122,16 @@ et on obtient un cycle hamiltonien dans $G'$ avec $x_0$
 
 Finalement, $p_1$ $\leq$ $p_2$
 
-# Classique en DS
+---
+
+## Classique en DS
 
 TD2 : exo4 variante ${a_k, b_k}$  
 et vérifier la parité d'un nombre
 
-# 10/10/2022
+---
+
+## 10/10/2022
 
 ## P et NP
 
@@ -163,7 +175,9 @@ Un problème $\Pi$ est NP-complet si et seulement si (classe les plus difficiles
   Comment ?
   - On trouve un problème $\Pi'$ qui est NP-Complet et tel qu'il existe $\Pi' \propto \Pi$
 
-# 17/10/2022
+---
+
+## 17/10/2022
 
 Problème Partition :
 Partition est NP-Complet
