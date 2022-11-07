@@ -222,3 +222,47 @@ $x_1, y_1, z_1$
 $B = 001001001\dots$ (taille $3tp$)  
 $a_{k+1} = 2S - B$  
 $a_{k+2} = S + B$
+
+---
+
+## 07/11/2022
+
+## Vertex Cover
+
+**Definition :** un vertex cover d'un graphe $G = (V,E)$ est un sous-ensemble $V \subseteq V$ qui inclut au moins une extrémité de chaque arête de $G$ : $V' \subseteq V$ tel que $\forall \{u,v\} \in E$, on a $\{u,v\} \cap V' \neq \emptyset$
+
+- Vertex cover
+- Entrées : Un graphe $G = (V,E)$ (représenté par sa liste d'adjacence), un entier $k \in \mathbb{N}$
+- Question : Existe-t-il un vertex cover de taille au plus $k$ ?
+
+Comment montrer que Vertex Cover est NP-Complet ?
+
+- Vertex Cover est dans NP car il est possible de vérifier, en temps polynomial la validité d'une solution
+- NP-Difficulté ? En faisant une réduction polynomiale : 3-Sat $\propto$ Vertex Cover
+
+## 3-Sat
+
+Exemple :
+$$
+\begin{align*}
+\phi = &\phantom{}&(x_1 \lor \lnot  x_2 \lor \lnot x_3)  \\
+&\land &(\lnot x_1 \lor \lnot  x_3 \lor \lnot  x_4) \\
+&\land &(\lnot x_2 \lor x_3 \lor \lnot x_4) \\
+&\land &(x_2 \lor x_4 \lor \lnot x_5)  \\
+&\land &(\lnot x_3 \lor \lnot x_4 \lor x_5)
+\end{align*}
+$$
+
+// TODO : mettre le schéma
+
+$n$ variables et $p$ clauses
+
+$\exists$ une solution pour 3-SAT $\iff$ $\exists$ un vertex cover de $G$ de taille $n + 2p$
+
+$2p$ clauses car au moins besoin d'utiliser 2 sommets dans chaque triangle
+
+**Preuve :**
+
+- $\Rightarrow$ S'il existe une affectation qui rend vrai 3-SAT, alors il existe un Vertex Cover de taille $n + 2p$.
+- $\Leftarrow$ S'il existe un Vertex Cover $V'$ de taille $|n + 2p|$, alors nécessairement il y a $n$ sommets de $V_1$ qui sont dans $V'$ et $2p$ sommets de $V_2$ qui sont dans $V'$.  
+  Donc $\exists$ une affectation qui rend vrai $\phi$ en prenant les sommet de $V_2$ qui ne sont pas dans $V'$.
