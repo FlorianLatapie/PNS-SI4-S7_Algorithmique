@@ -369,6 +369,33 @@ $$
 \end{align*}
 $$
 
+Autre réponse possible
+
+Partition $\propto$ 3-Partition
+
+$A = \{a_1, a_2, \dots, a_k\} \xrightarrow[\text{Transformation polynomiale}]{} B = \{a_1, a_2, \dots, a_k, a_{k+1}\}$ avec $a_{k+1} = \frac{1}{2} \sum_{i = 1}^{k} a_i$
+
+- $\Rightarrow$ Soit $A' \subseteq A$ une solution de Partition, alors si on prend les 3 sous ensembles suivants de $B$
+  - $A'$
+  - $A \backslash A'$
+  - $\{a_{k+1}\}$
+
+  On a une solution pour 3-Partition  
+  En effet, par construction et par hypothèse :  
+  $\sum_{a \in A'}a = \sum_{a \in A \backslash A'}a = \{a_{k+1}\}$
+
+- $\Leftarrow$ On suppose une solution pour 3-Partition : $B_1$, $B2$ et $B_3$ avec $B \cup B_2 \cup B_3 = B$ et $B_i \cap B_j = \emptyset $ $(i,j) = (1,2), (1,3), (2,3)$
+
+On $\sum_{b_1 \in B_1}b_1 = \sum_{b_2 \in B_2}b_2 = \sum_{b_3 \in B_3}b_3$
+
+Supposons que $a_{k+1} \in B_3$  
+Alors $|B_3| = 1$  
+Sinon on avait $\sum_{b_3 \in B_3} b_3 > \frac{1}{2} \sum_{i = 1}^{k}a_i = \frac{1}{3} \sum_{b \in B}b$ (par construction)
+
+On aurait la somme des éléments de $B_3$ strictement plus grande que le tiers de la somme des éléments de $B$
+
+Alors $B_1$ et $B_2$ est une solution pour partition car $B_1 \cup B_2 = A$ et $\sum_{b_1 \in B_1}b_1 = \sum_{b_2 \in B_2}b_2$
+
 ---
 
 ## Exercice 10
@@ -401,3 +428,46 @@ $$
 $$
 
 $c = \sum_{i=1}^n 2^i + \sum_{i=1}^m 2^{n+2i}$
+
+Autre réponse possible
+
+X3-SAT $\propto$ Somme de sous-ensembles
+
+$$
+\begin{align*}
+\phi = &(a \lor \lnot b \lor c) &\land &(a \lor b \lor d) &\land &(\lnot b \lor c \lor d) \\
+&C1 & &C2 & &C3
+\end{align*}
+$$
+
+|           | $C_3$ | $C_2$ | $C_1$ |  d  |  c  |  b  |  a  |
+|:---------:|:-----:|:-----:|:-----:|:---:|:---:|:---:|:---:|
+|    $a$    |   0   |   1   |   1   |  0  |  0  |  0  |  1  |
+| $\lnot a$ |   0   |   0   |   0   |  0  |  0  |  0  |  1  |
+|    $b$    |   0   |   1   |   0   |  0  |  0  |  1  |  0  |
+| $\lnot b$ |   1   |   0   |   1   |  0  |  0  |  1  |  0  |
+|    $c$    |   1   |   0   |   1   |  0  |  1  |  0  |  0  |
+| $\lnot c$ |   0   |   0   |   0   |  0  |  1  |  0  |  0  |
+|    $d$    |   1   |   1   |   0   |  1  |  0  |  0  |  0  |
+| $\lnot d$ |   0   |   0   |   0   |  1  |  0  |  0  |  0  |
+|           |   0   |   0   |   1   |  0  |  0  |  0  |  0  |
+|           |   0   |   0   |   1   |  0  |  0  |  0  |  0  |
+|           |   0   |   1   |   0   |  0  |  0  |  0  |  0  |
+|           |   0   |   1   |   0   |  0  |  0  |  0  |  0  |
+|           |   1   |   0   |   0   |  0  |  0  |  0  |  0  |
+|           |   1   |   0   |   0   |  0  |  0  |  0  |  0  |
+
+
+$$
+\begin{align*}
+&\text{Soient les variables }x_1,\dots, x_n &\rightarrow &\text{On construit les }a_i (i = 1, \dots, n) \text{ composés de } n+m chiffres: \\
+&\text{Soient les clauses }C_1, \dots, C_m &\phantom{} & \text{- le } j^{ème} \text{vaut 1 si } x_i \in C_j\\
+&\phantom{} &\phantom{} & \text{- le } (m+i)^{ème} \text{chiffre vaut 1}\\
+&\phantom{} &\phantom{} & \text{- les autres chiffres valent 0}\\
+\end{align*}
+$$
+
+De même pour tous les $a_i$ qui correspondent aux négations  
+Enfin on ajoute 2 nombres pour chaque clauses avec un unique 1 dans la case qui correspond à la clause.
+
+C'est composé de "3" pour ses $m$ premiers chiffres et "1" pour les autres. 
