@@ -369,7 +369,6 @@ $$
 \end{align*}
 $$
 
-
 ---
 
 ## Exercice 10
