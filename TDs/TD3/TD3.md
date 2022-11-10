@@ -457,7 +457,6 @@ $$
 |           |   1   |   0   |   0   |  0  |  0  |  0  |  0  |
 |           |   1   |   0   |   0   |  0  |  0  |  0  |  0  |
 
-
 $$
 \begin{align*}
 &\text{Soient les variables }x_1,\dots, x_n &\rightarrow &\text{On construit les }a_i (i = 1, \dots, n) \text{ composés de } n+m chiffres: \\
@@ -470,4 +469,4 @@ $$
 De même pour tous les $a_i$ qui correspondent aux négations  
 Enfin on ajoute 2 nombres pour chaque clauses avec un unique 1 dans la case qui correspond à la clause.
 
-C'est composé de "3" pour ses $m$ premiers chiffres et "1" pour les autres. 
+C'est composé de "3" pour ses $m$ premiers chiffres et "1" pour les autres.
