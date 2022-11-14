@@ -31,6 +31,22 @@ Prouver un algorithme de programmation dynamique polynomial dans le cas des arbr
 
 Quelle est sa complexité ?
 
+### Réponse exercice 2
+
+$v \in V \longmapsto (f(v), g(v))$
+
+$f(v) = $ stable max du sous-arbre enraciné en $v$ inclus  
+$g(v) = $ stable max du sous-arbre enraciné en $v$ exclu
+
+$f(v) = 1 + \sum_{u \in V(v)} g(u)$  
+$g(v) = \sum_{u \in V(v)} \text{Max}(f(u), g(u))$
+
+Cas d'arrêt : feuille ($v$)  
+f(v) = 1  
+g(v) = 0
+
+Complexité : $O(n)$
+
 ## Exercice 3
 
 Nom : **Sac à dos**
