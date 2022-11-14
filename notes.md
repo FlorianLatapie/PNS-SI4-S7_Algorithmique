@@ -266,3 +266,59 @@ $2p$ clauses car au moins besoin d'utiliser 2 sommets dans chaque triangle
 - $\Rightarrow$ S'il existe une affectation qui rend vrai 3-SAT, alors il existe un Vertex Cover de taille $n + 2p$.
 - $\Leftarrow$ S'il existe un Vertex Cover $V'$ de taille $|n + 2p|$, alors nécessairement il y a $n$ sommets de $V_1$ qui sont dans $V'$ et $2p$ sommets de $V_2$ qui sont dans $V'$.  
   Donc $\exists$ une affectation qui rend vrai $\phi$ en prenant les sommet de $V_2$ qui ne sont pas dans $V'$.
+
+## 14/11/2022
+
+### Résumé du controle
+
+La moyenne du controle avant l'harmonisation est de 8/20 avec un écart type de 5 (C'est très grand). 15/78 personnnes (19,2%) de la promo ont eu plus de 15/20. Une personne a eu 20/20 sans harmoniser.
+
+Ceux qui ont compris l'idée sur les exercices de reduction auront une "bonne note" pour cette partie. De plus, 3/4 exercices ont étés notés.  
+Comprendre l'idée de l'exercice : le problème qu'on sait, on le met a droite.
+
+Afin de parer a cela, les notes ont étés harmonisées. La moyenne harmonisée est donc de 10,5/20.
+
+Avant comme après harmonisation, les notes vont de 0 à 20.
+
+Résumé des informations :
+
+| Notes | # de personnes | % de la promo |
+|-------|----------------| ------------- |
+| 0-5   | 7              | 8,97%         |
+| 5-10  | 30             | 38,46%        |
+| 10-15 | 26             | 33,33%        |
+| 15-20 | ? (calculé 15) | 6,41%         |
+| 18-20 | (10-4 =) 6     | 7,69%         |
+| 20    | 4              | 5,13%         |
+
+Résumé du résumé :
+
+| Notes | # de personnes | % de la promo |
+|-------|----------------| ------------- |
+| 0-5   | 7              | 8,97%         |
+| 5-10  | 30             | 38,46%        |
+| 10-15 | 26             | 33,33%        |
+| 15-20 | 15             | 19,23%        |
+
+Pas de nouvelles notes prévues avant le partiel final.
+
+## Programmation dynamique
+
+![image](assets/2022.14.11-1.jpg)
+
+Min Vertex Cover = Version minimisation de Vertex Cover  
+$\rightarrow$ Trouver un plus petit ensemble de sommets qui est Vertex Cover du graphe.  
+$N_T (v) = \{v_1, v_2, \dots, v_d\}$
+
+Pour tout $v \in V$, on calcule :  
+$f(v) =$ la taille du plus petit ensemble couvrant de $v$ avec la contrainte que $v$ est dans l'ensemble.
+$g(v) =$ la taille du plus petit ensemble couvrant de $v$ avec la contrainte que $v$ n'est pas dans l'ensemble.
+
+Soit $v \in V$ et les enfants de $v$ notés par l'ensemble $N_T (v)  = \{v_1, v_2, \dots, v_d\}$
+
+Soient $(f(v_1), g(v_1)), (f(v_2), g(v_2)), \dots, (f(v_d), g(v_d))$ connus.  
+$f(v) = 1 + \sum_{i=1}^d min(f(v_i), g(v_i))$  
+$g(v) = \sum_{i=0}^d f(v_i)$
+
+$f(v) = 1$  
+$g(v) = 0$
