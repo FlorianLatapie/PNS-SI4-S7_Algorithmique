@@ -199,7 +199,7 @@ On peut vérifier une solution en temps polynomial.
 
 3DM $\propto$ Partition
 
-Nimporte quelle instance et 3DM
+N'importe quelle instance et 3DM
 
 $X, Y, Z$  
 $M$  
@@ -215,9 +215,9 @@ Exemple :
 
 $x_1, y_1, z_1$
 
-|001|000|000|000|001|000|000|000|001| $(3tp)$
-|---|---|---|---|---|---|---|---|---|---|
-|$x_1$|$x_2$|$x_3$|$y_1$|$y_2$|$y_3$|$z_1$|$z_2$|$z_3$|
+| 001   | 000   | 000   | 000   | 001   | 000   | 000   | 000   | 001   | $(3tp)$ |
+|-------|-------|-------|-------|-------|-------|-------|-------|-------|---------|
+| $x_1$ | $x_2$ | $x_3$ | $y_1$ | $y_2$ | $y_3$ | $z_1$ | $z_2$ | $z_3$ |         |
 
 $B = 001001001\dots$ (taille $3tp$)  
 $a_{k+1} = 2S - B$  
@@ -229,15 +229,15 @@ $a_{k+2} = S + B$
 
 ## Vertex Cover
 
-**Definition :** un vertex cover d'un graphe $G = (V,E)$ est un sous-ensemble $V \subseteq V$ qui inclut au moins une extrémité de chaque arête de $G$ : $V' \subseteq V$ tel que $\forall \{u,v\} \in E$, on a $\{u,v\} \cap V' \neq \emptyset$
+**Definition :** un Vertex Cover d'un graphe $G = (V,E)$ est un sous-ensemble $V \subseteq V$ qui inclut au moins une extrémité de chaque arête de $G$ : $V' \subseteq V$ tel que $\forall \{u,v\} \in E$, on a $\{u,v\} \cap V' \neq \emptyset$
 
 - Vertex cover
 - Entrées : Un graphe $G = (V,E)$ (représenté par sa liste d'adjacence), un entier $k \in \mathbb{N}$
-- Question : Existe-t-il un vertex cover de taille au plus $k$ ?
+- Question : Existe-t-il un Vertex Cover de taille au plus $k$ ?
 
 Comment montrer que Vertex Cover est NP-Complet ?
 
-- Vertex Cover est dans NP car il est possible de vérifier, en temps polynomial la validité d'une solution
+- Vertex Cover est dans NP, car il est possible de vérifier, en temps polynomial la validité d'une solution
 - NP-Difficulté ? En faisant une réduction polynomiale : 3-Sat $\propto$ Vertex Cover
 
 ## 3-Sat
@@ -259,7 +259,7 @@ $n$ variables et $p$ clauses
 
 $\exists$ une solution pour 3-SAT $\iff$ $\exists$ un vertex cover de $G$ de taille $n + 2p$
 
-$2p$ clauses car au moins besoin d'utiliser 2 sommets dans chaque triangle
+$2p$ clauses, car au moins besoin d'utiliser 2 sommets dans chaque triangle
 
 **Preuve :**
 
@@ -269,21 +269,21 @@ $2p$ clauses car au moins besoin d'utiliser 2 sommets dans chaque triangle
 
 ## 14/11/2022
 
-### Résumé du controle
+### Résumé du contrôle
 
-La moyenne du controle avant l'harmonisation est de 8/20 avec un écart type de 5 (C'est très grand). 15/78 personnnes (19,2%) de la promo ont eu plus de 15/20. Une personne a eu 20/20 sans harmoniser.
+La moyenne du contrôle avant l'harmonisation est de 8/20 avec un écart type de 5 (C'est très grand). 15/78 personnnes (19,2%) de la promo ont eu plus de 15/20. Une personne a eu 20/20 sans harmoniser.
 
 Ceux qui ont compris l'idée sur les exercices de reduction auront une "bonne note" pour cette partie. De plus, 3/4 exercices ont étés notés.  
-Comprendre l'idée de l'exercice : le problème qu'on sait, on le met a droite.
+Comprendre l'idée de l'exercice : le problème qu'on sait, on le met à droite.
 
-Afin de parer a cela, les notes ont étés harmonisées. La moyenne harmonisée est donc de 10,5/20.
+Afin de parer à cela, les notes ont étés harmonisés. La moyenne harmonisée est donc de 10,5/20.
 
 Avant comme après harmonisation, les notes vont de 0 à 20.
 
 Résumé des informations :
 
 | Notes | # de personnes | % de la promo |
-|-------|----------------| ------------- |
+|-------|----------------|---------------|
 | 0-5   | 7              | 8,97%         |
 | 5-10  | 30             | 38,46%        |
 | 10-15 | 26             | 33,33%        |
@@ -294,7 +294,7 @@ Résumé des informations :
 Résumé du résumé :
 
 | Notes | # de personnes | % de la promo |
-|-------|----------------| ------------- |
+|-------|----------------|---------------|
 | 0-5   | 7              | 8,97%         |
 | 5-10  | 30             | 38,46%        |
 | 10-15 | 26             | 33,33%        |

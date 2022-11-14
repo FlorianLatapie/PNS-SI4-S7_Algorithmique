@@ -6,13 +6,13 @@ Question : existe-t-il un sous-ensemble $E' \subseteq E$ tel que la somme des é
 
 ## Exercice 1
 
-Montrer que Somme de Sous-Ensembles est dans NP en décrivant une machine de Turing non-déterministe.
+Montrer que Somme de Sous-Ensembles est dans NP en décrivant une machine de Turing non déterministe.
 
 ### Réponse exercice 1
 
 - Machine de Turing non déterministe.  
-  On fait une machine de Turing à 3 états on prend l'élément et on ne prend pas l'élément, ainsi que l'état initial.
-  À chaque élément de e on fait respectivement les deux choix. Si sur le deuxième on a 0 la réponse est oui.
+  On fait une machine de Turing à 3 états, on prend l'élément et on ne prend pas l'élément, ainsi que l'état initial.
+  À chaque élément de $e$ on fait respectivement les deux choix. Si sur le deuxième on a 0 la réponse est oui.
 
   ```mermaid
   graph LR
@@ -86,7 +86,7 @@ $\Rightarrow$ Réduction en temps polynomial
     $V' = V$  
     $E' = E \cup \{(v_0, v_1), \exists v_0, v_1 \in V, (v_1, v_0) \in E\}$
 
-    $\Rightarrow$ On suppose qu'il existe un cycle Hamiltonien dans $G$ alors on a un circuit Hamiltonien dans $G'$ car les arcs du cycle dans $G$ sont symétriques.
+    $\Rightarrow$ On suppose qu'il existe un cycle Hamiltonien dans $G$ alors on a un circuit Hamiltonien dans $G'$, car les arcs du cycle dans $G$ sont symétriques.
 
     $\Leftarrow$ On suppose qu'il existe un cycle Hamiltonien dans $G'$ alors on a un circuit Hamiltonien dans $G$
 
@@ -156,7 +156,7 @@ $\Rightarrow$ Réduction en temps polynomial
 
     Transformation d'un graphe dirigé en un graphe non dirigé :
 
-    - On transforme chaque noeud du problème initial en 3 noeuds : un qui gère les entrées, un qui gère les sorties et un dernier au milieu reliant les deux précédents. Ce dernier noeud permet de bien vérifier une entrée puis une sortie.
+    - On transforme chaque nœud du problème initial en 3 nœuds : un qui gère les entrées, un qui gère les sorties et un dernier au milieu reliant les deux précédents. Ce dernier nœud permet de bien vérifier une entrée puis une sortie.
     - La transformation est polynomiale.
 
 7. **Circuit Hamiltonien $\propto$ chemin Hamiltonien**  
@@ -285,7 +285,7 @@ A' \subseteq A &\Rightarrow{} n = 2\\
 $$
 
 $\Rightarrow{}$ Soit $A \subseteq A$ tel que $\sum_{a \in A} a = \sum_{a \in A \backslash A'} a$  
-On construit une instance d'orderonnancement de tâches de la manière suivante :
+On construit une instance d'ordonnancement de tâches de la manière suivante :
 
 - Les tâches correspondantes aux éléments de $A'$ sont sur le cœur 1
 - Les tâches correspondantes aux éléments de $A \backslash A'$ sont sur le cœur 2
@@ -298,7 +298,7 @@ Montrer que le problème Plus petit ensemble de tests est NP-difficile.
 
 Nom : **Plus petit ensemble de tests**  
 Instance : $P$ un ensemble de pannes possibles, $C$ une famille de sous-ensembles de $P$ représentant des tests, $J$ un entier  
-Question : Existe-t-il un sous-famille de tests $C'$ de cardinalité au plus $J$ telle que pour toute
+Question : Existe-t-il une sous-famille de tests $C'$ de cardinalité au plus $J$ telle que pour toute
 paire $p_i$, $p_j$ de pannes, il existe $c \in C'$ un test tel que $|\{p_i, p_j\} \cap c | = 1$. En d’autres termes, existe-t-il un test qui permette de distinguer la panne $p_i$ de la panne $p_j$ (pour tout $i$ et $j$).
 
 ---
@@ -320,7 +320,7 @@ $f : G(V,E) \rightarrow G'(V',E'), u, v \in V', S \in \mathbb{N}$
 ![image](./r%C3%A9ponse%208.jpg)
 
 $G'$ est composé de $G$ avec chacune des arrêtes de $G$ avec un poids de $1$.  
-On rajoute $2$ sommets à $G'$, $u$ et $v$, relisés à tous les sommets de $V$ avec un poids de $1$.  
+On rajoute $2$ sommets à $G'$, $u$ et $v$, reliés à tous les sommets de $V$ avec un poids de $1$.  
 On prend $S = |V| - 1 + 2 = |V| + 1$.
 
 $$
@@ -404,7 +404,7 @@ Montrer que le problème Somme de sous-ensembles est NP-difficile (en utilisant 
 
 Nom : **Somme de sous-ensembles**  
 Instance : Un ensemble A d’entiers non négatifs et un entier $C$  
-Question : Existe-t-il un sous-ensemble de A qui somme à $C$ ?  
+Question : Existe-t-il un sous-ensemble de $A$ qui somme à $C$ ?  
 
 ### Réponse exercice 10
 
@@ -467,6 +467,6 @@ $$
 $$
 
 De même pour tous les $a_i$ qui correspondent aux négations  
-Enfin on ajoute 2 nombres pour chaque clauses avec un unique 1 dans la case qui correspond à la clause.
+Enfin on ajoute 2 nombres pour chaque clause avec un unique 1 dans la case qui correspond à la clause.
 
 C'est composé de "3" pour ses $m$ premiers chiffres et "1" pour les autres.

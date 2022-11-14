@@ -3,8 +3,8 @@
 ## Exercice 1
 
 Nom : **Chemin le plus long**  
-Instance : Un arbre arête-pondéré $T = (V, E)$ eprésenté sous forme de listes d’adjacence avec $p(uv)$ le poids (entier non-négatif) de chaque arête $uv$ de $E$, une somme racine $r$ de $V$ et un entier non-négatif $L$.  
-Question : Le grapch admet-il un chemin de simple de $r$ à feuille de $T$ telle que la somme des poids des arêtes composant est au moins $L$ ?
+Instance : Un arbre arête-pondéré $T = (V, E)$ représenté sous forme de listes d’adjacence avec $p(uv)$ le poids (entier non-négatif) de chaque arête $uv$ de $E$, une somme racine $r$ de $V$ et un entier non-négatif $L$.  
+Question : Le graphe admet-il un chemin de simple de $r$ à feuille de $T$ telle que la somme des poids des arêtes composant est au moins $L$ ?
 
 Notons que la version du problème dans le cas général des graphes est NP-complet (chaîne hamiltonienne).
 
@@ -25,7 +25,7 @@ Complexité : $O(n)$
 
 Nom : **Ensemble Indépendant**  
 Instance : Un graphe fini $G = (V, E)$ représenté sous forme de listes d’adjacence, un nombre entier non-négatif $k$  
-Question : Le graphe admet-il un ensemble indépendant de taille $k$ ? 
+Question : Le graphe admet-il un ensemble indépendant de taille $k$ ?
 
 Prouver un algorithme de programmation dynamique polynomial dans le cas des arbres.
 
