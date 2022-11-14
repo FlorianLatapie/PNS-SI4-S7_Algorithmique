@@ -14,6 +14,12 @@ Quelle est sa complexité ?
 
 ### Réponse exercice 1
 
+$f(v)=$ longueur du plus long chemin de $v$ vers une feuille
+
+$v$ est une feuille $\Rightarrow f(v) = 0$  
+$f(v) = \text{Max}(\{p(uv)+f(u), u\in V(v)\})$
+
+Complexité : $O(n)$
 
 ## Exercice 2
 
