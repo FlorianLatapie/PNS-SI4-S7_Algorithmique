@@ -56,3 +56,28 @@ Question : existe-t-il un sous-ensemble $X’$ de $X$ tel que la somme des valeu
 Prouver un algorithme de programmation dynamique.
 
 Quelle est sa complexité ?
+
+### Réponse exercice 3
+
+$X = \{x_1, x_2, ..., x_n\}$  
+$v(x_i) \in \mathbb{N}$  
+$p(x_i) \in \mathbb{N}$  
+$V, P \in \mathbb{N}$
+
+$R \subseteq X, \sum_{k \in R} v(k) \geq V$ et $\sum_{k \in R} p(k) \leq P$
+
+Exemple :
+
+|     |  0  |  1  |  2  |  3  |  4  |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|  0  |  0  |  0  |  0  |  0  |  0  |
+|  1  |  0  |  0  |  3  |  3  |  3  |
+|  2  |  0  |  1  |  3  |  4  |  4  |
+|  3  |  0  |  3  |  4  |  6  |  7  |
+|  4  |  0  |  3  |  4  |  6  |  7  |
+|  5  |  0  |  3  |  5  |  6  |  8  |
+
+|  obj  |  1  |  2  |  3  |  4  |  5  |
+|:-----:|:---:|:---:|:---:|:---:|:---:|
+|  val  |  3  |  1  |  3  |  1  |  2  |
+| poids |  2  |  1  |  1  |  2  |  1  |
