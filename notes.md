@@ -304,11 +304,14 @@ Pas de nouvelles notes prévues avant le partiel final.
 
 ## Programmation dynamique
 
-![image](assets/2022.14.11-1.jpg)
+![image](assets/2022.14.11_1.jpg)
 
 Min Vertex Cover = Version minimisation de Vertex Cover  
 $\rightarrow$ Trouver un plus petit ensemble de sommets qui est Vertex Cover du graphe.  
 $N_T (v) = \{v_1, v_2, \dots, v_d\}$
+
+![image](assets/2022.14.11_2.jpg)
+![image](assets/2022.14.11_3.jpg)
 
 Pour tout $v \in V$, on calcule :  
 $f(v) =$ la taille du plus petit ensemble couvrant de $v$ avec la contrainte que $v$ est dans l'ensemble.
