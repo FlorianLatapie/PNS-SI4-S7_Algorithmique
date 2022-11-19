@@ -35,8 +35,8 @@ Quelle est sa complexité ?
 
 $v \in V \longmapsto (f(v), g(v))$
 
-$f(v) = $ stable max du sous-arbre enraciné en $v$ inclus  
-$g(v) = $ stable max du sous-arbre enraciné en $v$ exclu
+$f(v) =$ stable max du sous-arbre enraciné en $v$ inclus  
+$g(v) =$ stable max du sous-arbre enraciné en $v$ exclu
 
 $f(v) = 1 + \sum_{u \in V(v)} g(u)$  
 $g(v) = \sum_{u \in V(v)} \text{Max}(f(u), g(u))$
