@@ -325,3 +325,39 @@ $g(v) = \sum_{i=0}^d f(v_i)$
 
 $f(v) = 1$  
 $g(v) = 0$
+
+## 21/11/2022
+
+### Approximation
+
+Un problème de minimisation P admet une approximation en temps polynomial à un facteur constant $k$ ($k$ un réel plus grand que 1) s'il existe un algorithme $A$ de complexité polynomiale telle que $\forall$ instance de $P$, alors $A$ retourune une solution $S$ avec $|S| \leq k |S^*|$ ($S^*$ une solution optimale).
+
+Problème :  
+Vertex cover (approximation)
+On va prouver une 2-approximation en temps polynomial. (k=2)
+
+$G = (V, E)$
+
+**Principe de l'algorithme :** calculer un couplage maximal (par inclusion)
+
+Definition :
+**Couplage**  étant donné un graphe $G = (V, E)$, un couplage est un ensemble d'aretes $E' \subseteq E$ deux à deux disjointes. (Autrement dit ; tout sommet de $V$ est une extrémité d'au plus 1 arrête de $E'$)
+
+$E = \{e_1, e_2, \dots, e_n\}$
+
+Comment trouver un couplage maximal ?
+
+- on prend les arrêtes les plus dans l'ordre et on ajoute une arrête au couplage si et seulement si cet ajout permet à $C$ de rester un couplage.
+
+On construit un vertex cover en prenant les 2 extrémités de chaque arrete du couplage maximal calculé
+
+On note cet ensemble $V' \subseteq V$.  
+On montre que $V'$ est un vertex cover.  
+En effet comme $C$ est un couplage maximal, alors  chque arrete $e \in E$ a (au moins) uneextrémité dans $V'$. par construction de V'
+
+Montrons que $|V'| \leq 2|V^*|$ avec $V^*$ un vertex de plus petite cardinalité.  
+Pour chaque arrete de $C$, nécessairement une des deux extrémités (ou moins) doit être dans tout vertex cover.  
+Donc, alors le pire des cas, prendre une extremeite suffit.  
+Donc notre algorithme est une 2-approximation polynomiale 
+
+Complexité : $C(n,m) = O(m^2)$
