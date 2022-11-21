@@ -358,6 +358,6 @@ En effet comme $C$ est un couplage maximal, alors  chque arrete $e \in E$ a (au 
 Montrons que $|V'| \leq 2|V^*|$ avec $V^*$ un vertex de plus petite cardinalité.  
 Pour chaque arrete de $C$, nécessairement une des deux extrémités (ou moins) doit être dans tout vertex cover.  
 Donc, alors le pire des cas, prendre une extremeite suffit.  
-Donc notre algorithme est une 2-approximation polynomiale 
+Donc notre algorithme est une 2-approximation polynomiale
 
 Complexité : $C(n,m) = O(m^2)$
