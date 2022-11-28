@@ -229,7 +229,8 @@ $a_{k+2} = S + B$
 
 ## Vertex Cover
 
-**Definition :** un Vertex Cover d'un graphe $G = (V,E)$ est un sous-ensemble $V \subseteq V$ qui inclut au moins une extrémité de chaque arête de $G$ : $V' \subseteq V$ tel que $\forall \{u,v\} \in E$, on a $\{u,v\} \cap V' \neq \emptyset$
+**Definition :**  
+Un Vertex Cover d'un graphe $G = (V,E)$ est un sous-ensemble $V \subseteq V$ qui inclut au moins une extrémité de chaque arête de $G$ : $V' \subseteq V$ tel que $\forall \{u,v\} \in E$, on a $\{u,v\} \cap V' \neq \emptyset$
 
 - Vertex cover
 - Entrées : Un graphe $G = (V,E)$ (représenté par sa liste d'adjacence), un entier $k \in \mathbb{N}$
@@ -340,7 +341,7 @@ $G = (V, E)$
 
 **Principe de l'algorithme :** calculer un couplage maximal (par inclusion)
 
-Definition :
+**Definition :**  
 **Couplage**  étant donné un graphe $G = (V, E)$, un couplage est un ensemble d'aretes $E' \subseteq E$ deux à deux disjointes. (Autrement dit ; tout sommet de $V$ est une extrémité d'au plus 1 arrête de $E'$)
 
 $E = \{e_1, e_2, \dots, e_n\}$
@@ -361,3 +362,19 @@ Donc, alors le pire des cas, prendre une extremeite suffit.
 Donc notre algorithme est une 2-approximation polynomiale
 
 Complexité : $C(n,m) = O(m^2)$
+
+## 28/11/2022
+
+Décomposition de $G$ en arbre (décomposition arborescente) est un arbre $T(N,A)$ tavec $N = \{N_1, N_2, \dots, N_p\}$, $N \subseteq V$ pour tout $1 \dots p$ tel que :
+
+- Les sous-ensembles couvrant les sommets de $G$ : $\underset{i = 1 \dots p}{\cup} N_i = V$
+- Pour toute arête $vw \in E$, il existe un noeud $N_i$ tel que $v,w \in N_i$ (pour i donné)
+- Pour tout sommet $v \in V$, les noeuds $N_i$ et $N_j$ contenant $v$ forment un sous-arbre de $T$.
+
+**Definition :**  
+Graphe connexe : $G=(V,E)$ est connexe si pour tout $u,v \in V$, alors il existe un chemin etre $u$ et $v$ dans $G$
+
+La largeur arborescente de $T = -1 + \underset{i = 1 \dots p}{\max} |N_i| = 2$
+
+$v \space c (T_M, C \subseteq N_i)$ pour tous les sous-ensembles $C$ de $N$  
+= vetex cover min de $T_{N_i}$ avec la contriante que les sommets de $C$ sont dans le vertex cover. (les sommets qui ne sont pas dans $C$ ne sont pas dans le vertex cover)
