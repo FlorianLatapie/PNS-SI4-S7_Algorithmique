@@ -175,7 +175,7 @@ def f(x):
   s(x) = visité
 ```
 
-cf [Wikipedia : Algorithme de Dijkstra](https://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra)
+Cf. [Wikipedia : Algorithme de Dijkstra](https://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra)
 
 ## Exercice 5
 

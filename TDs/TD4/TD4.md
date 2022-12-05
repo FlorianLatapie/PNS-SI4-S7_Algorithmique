@@ -41,7 +41,7 @@ $g(v) =$ stable max du sous-arbre enraciné en $v$ exclu
 $f(v) = 1 + \sum_{u \in V(v)} g(u)$  
 $g(v) = \sum_{u \in V(v)} \text{Max}(f(u), g(u))$
 
-Cas d'arrêt : feuille ($v$)  
+Cas d'arrêt : feuille ( $v$)  
 f(v) = 1  
 g(v) = 0
 
