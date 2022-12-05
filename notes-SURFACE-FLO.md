@@ -378,35 +378,3 @@ La largeur arborescente de $T = -1 + \underset{i = 1 \dots p}{\max} |N_i| = 2$
 
 $v \space c (T_M, C \subseteq N_i)$ pour tous les sous-ensembles $C$ de $N$  
 = Vertex Cover min de $T_{N_i}$ avec la contrainte que les sommets de $C$ sont dans le Vertex Cover. (les sommets qui ne sont pas dans $C$ ne sont pas dans le Vertex Cover)
-
-## 05/12/2022
-
-### Infos sur l'oral de l'aprem
-
-Objectif : apporter des points  
-5 minutes de préparation, 1.30 min d'oral  
-Si c'est une machine de turing on demande que les grandes lignes, pas besoin de détails.  
-Montrer dans les grandes lignes qu'on a compris  
-Si on a pas compris comment faire une reduction c'est mort
-
-### Rappels
-
-le non déterminisme c'est qu'a un état on peut avoir plusieurs transitions possibles
-
-p est contenu dans np
-
-montrer que c'est dans np et np-difficile (ca a l'aide d'une réduction polynomiale)
-
-montrer que le problème à droite est au moins aussi difficile qu'un problème a gauche qu'on connait  
-ca démontre qu'un problème np diffile est aussi dur que nous
-
-comment on montre qu'un problème est np difficile, on le montre avec une transformation polynomiale  
-
-pour prouver que c'est np :  
-1/2 : avec une machine de turing non déterministe  
-2/2 : une vérifier que c'est possible en temps polynomial (pas prouver, vérifier : dire que c'est possible)  
-
-### Comme en TD : problème du plus long chemin
-
-On va montrer que le plus long chemin n'est pas approximable en temps polynomial
-
