@@ -331,7 +331,8 @@ $g(v) = 0$
 
 ### Approximation
 
-Un problème de minimisation P admet une approximation en temps polynomial à un facteur constant $k$ ( $k$ un réel plus grand que 1) s'il existe un algorithme $A$ de complexité polynomiale telle que $\forall$ instance de $P$, alors $A$ retourune une solution $S$ avec $|S| \leq k |S^*|$ ( $S^*$ une solution optimale).
+Un problème de minimisation P admet une approximation en temps polynomial à un facteur constant $k$ ( $k$ un réel plus grand que 1) s'il existe un algorithme $A$ de complexité polynomiale telle que $\forall$ instance de $P$, alors $A$ retourune une solution $S$ avec $|S| \leq k |S^*|$ 
+( $S^*$ une solution optimale).
 
 Problème :  
 Vertex cover (approximation)
