@@ -11,7 +11,7 @@ La version minimisation consiste à minimiser la durée totale d’exécution ($
 
 ### Réponse exercice 1
 
-preuve par un algorithme
+Preuve par un algorithme
 
 ```py
 def ord(t, n): # t = tableau d'entiers
@@ -25,7 +25,7 @@ def ord(t, n): # t = tableau d'entiers
     return max(lst)
 ```
 
-A chaque tour de boucle :
+À chaque tour de boucle :
 
 ```py
 max(lst) <= min(lst) + max(t)
@@ -68,7 +68,7 @@ Pour tout entier $k$, prouver qu’il n’existe pas d’algorithme polynomial q
 
 Chaine Hamiltonienne $\xrightarrow[\text{Transformation polynomiale}]{}$ plus long chemin
 
-Chaine Hamiltonienne $\propto$ plus long chemin (notation officelle du prof donc c'est forcément le bon sens)
+Chaine Hamiltonienne $\propto$ plus long chemin (notation officielle du prof donc c'est forcément le bon sens)
 
 Pour toute instance :
 
@@ -80,7 +80,7 @@ $E' = E \cup \{u_x, x \in V\} \cup \{x_v, x \in V\}$
 
 On a donc : $w(e) = 1 \forall e \in E'$
 
-Chaine hamiiltonienne si et seulement si il existe un chemin simple de $u$ à $v$ de $G'$ de poids total $L$.
+Chaine Hamiltonienne si et seulement s'il existe un chemin simple de $u$ à $v$ de $G'$ de poids total $L$.
 
 **Plus long chemin (version maximisation)** :
 
@@ -89,7 +89,7 @@ Chaine hamiiltonienne si et seulement si il existe un chemin simple de $u$ à $v
   $u,v \in V$  
   $w(e) \forall e \in E$
 - **Question :**  
-  trouver un chemin simple entre $u$ et $v$ dans $G$ qui minimise le ploids total (somme des poids des aretes du chemin)
+  trouver un chemin simple entre $u$ et $v$ dans $G$ qui minimise le poids total (somme des poids des arêtes du chemin)
 
 Montrons qu'il n'existe pas d'algorithme d'approximation à un facteur 2 près en temps polynomial à moins que P=NP.
 
@@ -99,12 +99,12 @@ $n' = |V'|$
 $n' + 2 = 3n$  
 $n' = 3n - 2$  
 
-**Poids chemin noir** : $3n - 1$ (chemin ajouté entre $u$ et $v$ donc il y a 3n sommets et donc $3n - 1$ aretes)  
-**Poids chaine hamiltonienne** : toutes les aretes du graphe d'origine ont un poids de 8 : $8 \times (n - 1) = 8n - 8$
+**Poids chemin noir** : $3n - 1$ (chemin ajouté entre $u$ et $v$ donc il y a 3n sommets et donc $3n - 1$ arêtes)  
+**Poids chaine hamiltonienne** : toutes les arêtes du graphe d'origine ont un poids de 8 : $8 \times (n - 1) = 8n - 8$
 
 $|V \cup V'| = 4n - 2$  
 25% de $4n - 2 = n + \frac{1}{2}$  
-$\Rightarrow$ tout chemmin simple doit passer par au moins $n$ sommets
+$\Rightarrow$ tout chemin simple doit passer par au moins $n$ sommets
 
 Supposons qu'un tel algorithme $A$ existe.
 
@@ -112,7 +112,7 @@ Supposons qu'un tel algorithme $A$ existe.
   Comme "un chemin bleu" (chemin intérieur) a un poids strictement plus grand que $k$ fois le poids du "chemin noir" alors il n'y a pas de chemin hamiltonien dans $G$
 - **Soit $A$ retourne un chemin bleu** (chemin intérieur) et donc il existe une chaine dans hamiltonienne dans G.
 
-Donnc A permet de décider en temps polynomaial si un graphe $G$ quelconque admet une chaine hampiltoninn ou non."
+Donc A permet de décider en temps polynomial si un graphe $G$ quelconque admet une chaine hamiltonienne ou non."
 $\Rightarrow$ Une contradiction à moins que P $\neq$ NP (car chaine hamiltonienne est NP-Complet)
 
 ## Exercice 3
@@ -159,7 +159,7 @@ def parcoursLargeur(Graphe G, Sommet u, Sommet v):
 
 Complexité : $O(|V| + |E|)$
 
-cf [Wikipedia : Parcours en largeur](https://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_largeur)
+Cf. [Wikipédia : Parcours en largeur](https://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_largeur)
 
 ## Exercice 4
 
@@ -179,4 +179,4 @@ cf [Wikipedia : Algorithme de Dijkstra](https://fr.wikipedia.org/wiki/Algorithme
 
 ## Exercice 5
 
-Utiliser l'algorithme de l'exercice 3 afin de prouver un algorithme polynomial pour sortir de tout labirynthe.
+Utiliser l'algorithme de l'exercice 3 afin de prouver un algorithme polynomial pour sortir de tout labyrinthine.

@@ -47,7 +47,7 @@ ruban 2 : ... | B | B | B | B | B | ...$
 
 ## 26/09/2022
 
-Temps de calcul d'une machine de Turing (MT), est une fonction de T(n) avec n la taille des données
+Temps de calcul d'une machine de Turing (MT), est une fonction de $T(n)$ avec n la taille des données
 
 T(n) nombre maximum de transitions pour une donnée de taille n
 
@@ -67,7 +67,7 @@ en un temps `c T(n)`
 1. Nous encodons de la manière suivante les cases de MT $\longrightarrow$ 1 case de MT
 2. Ce codage permet plusieurs transitions à la fois.
    En effet, une lecture donne l'information de `n` cases de MT.
-   Donc on peut effectuer tout le travail de ces `n` lectures.
+   Donc, on peut effectuer tout le travail de ces `n` lectures.
    Chaque phase de base de `MT' >= m` transitions de `MT`
    Pour MT', on va lire 3 cases voisines ($3^m$ cases dans MT)  
    $T'(n) < 2n + \frac{8T(n)}{m}$  
@@ -266,13 +266,13 @@ $2p$ clauses, car au moins besoin d'utiliser 2 sommets dans chaque triangle
 
 - $\Rightarrow$ S'il existe une affectation qui rend vrai 3-SAT, alors il existe un Vertex Cover de taille $n + 2p$.
 - $\Leftarrow$ S'il existe un Vertex Cover $V'$ de taille $|n + 2p|$, alors nécessairement il y a $n$ sommets de $V_1$ qui sont dans $V'$ et $2p$ sommets de $V_2$ qui sont dans $V'$.  
-  Donc $\exists$ une affectation qui rend vrai $\phi$ en prenant les sommet de $V_2$ qui ne sont pas dans $V'$.
+  Donc $\exists$ une affectation qui rend vrai $\phi$ en prenant les sommets de $V_2$ qui ne sont pas dans $V'$.
 
 ## 14/11/2022
 
 ### Résumé du contrôle
 
-La moyenne du contrôle avant l'harmonisation est de 8/20 avec un écart type de 5 (C'est très grand). 15/78 personnnes (19,2%) de la promo ont eu plus de 15/20. Une personne a eu 20/20 sans harmoniser.
+La moyenne du contrôle avant l'harmonisation est de 8/20 avec un écart type de 5 (C'est très grand). 15/78 personnes (19,2%) de la promo ont eu plus de 15/20. Une personne a eu 20/20 sans harmoniser.
 
 Ceux qui ont compris l'idée sur les exercices de reduction auront une "bonne note" pour cette partie. De plus, 3/4 exercices ont étés notés.  
 Comprendre l'idée de l'exercice : le problème qu'on sait, on le met à droite.
@@ -331,7 +331,7 @@ $g(v) = 0$
 
 ### Approximation
 
-Un problème de minimisation P admet une approximation en temps polynomial à un facteur constant $k$ ( $k$ un réel plus grand que 1) s'il existe un algorithme $A$ de complexité polynomiale telle que $\forall$ instance de $P$, alors $A$ retourune une solution $S$ avec $|S| \leq k |S^\star|$ ( $S^\star$ une solution optimale).
+Un problème de minimisation P admet une approximation en temps polynomial à un facteur constant $k$ ( $k$ un réel plus grand que 1) s'il existe un algorithme $A$ de complexité polynomiale telle que $\forall$ instance de $P$, alors $A$ retourne une solution $S$ avec $|S| \leq k |S^\star|$ ( $S^\star$ une solution optimale).
 
 Problème :  
 Vertex cover (approximation)
@@ -342,39 +342,40 @@ $G = (V, E)$
 **Principe de l'algorithme :** calculer un couplage maximal (par inclusion)
 
 **Definition :**  
-**Couplage**  étant donné un graphe $G = (V, E)$, un couplage est un ensemble d'aretes $E' \subseteq E$ deux à deux disjointes. (Autrement dit ; tout sommet de $V$ est une extrémité d'au plus 1 arrête de $E'$)
+**Couplage** étant donné un graphe $G = (V, E)$, un couplage est un ensemble d'arêtes $E' \subseteq E$ deux à deux disjointes. (Autrement dit ; tout sommet de $V$ est une extrémité d'au plus 1 arrête de $E'$)
 
 $E = \{e_1, e_2, \dots, e_n\}$
 
 Comment trouver un couplage maximal ?
 
-- on prend les arrêtes les plus dans l'ordre et on ajoute une arrête au couplage si et seulement si cet ajout permet à $C$ de rester un couplage.
+- On prend les arêtes les plus dans l'ordre et on ajoute une arête au couplage si et seulement si cet ajout permet à $C$ de rester un couplage.
 
-On construit un vertex cover en prenant les 2 extrémités de chaque arrete du couplage maximal calculé
+On construit un Vertex Cover en prenant les 2 extrémités de chaque arête du couplage maximal calculé
 
 On note cet ensemble $V' \subseteq V$.  
-On montre que $V'$ est un vertex cover.  
-En effet comme $C$ est un couplage maximal, alors  chque arrete $e \in E$ a (au moins) uneextrémité dans $V'$. par construction de V'
+On montre que $V'$ est un Vertex Cover.  
+En effet, comme $C$ est un couplage maximal, alors chaque arête $e \in E$ a (au moins) une extrémité dans $V'$. 
+Par construction de $V'$
 
-Montrons que $|V'| \leq 2|V^*|$ avec $V^*$ un vertex de plus petite cardinalité.  
-Pour chaque arrete de $C$, nécessairement une des deux extrémités (ou moins) doit être dans tout vertex cover.  
-Donc, alors le pire des cas, prendre une extremeite suffit.  
+Montrons que $|V'| \leq 2|V^\star|$ avec $V^\star$ un vertex de plus petite cardinalité.  
+Pour chaque arête de $C$, nécessairement une des deux extrémités (ou moins) doit être dans tout Vertex Cover.  
+Donc, alors le pire des cas, prendre une extrémité suffit.  
 Donc notre algorithme est une 2-approximation polynomiale
 
 Complexité : $C(n,m) = O(m^2)$
 
 ## 28/11/2022
 
-Décomposition de $G$ en arbre (décomposition arborescente) est un arbre $T(N,A)$ tavec $N = \{N_1, N_2, \dots, N_p\}$, $N \subseteq V$ pour tout $1 \dots p$ tel que :
+Décomposition de $G$ en arbre (décomposition arborescente) est un arbre $T(N,A)$ avec $N = \{N_1, N_2, \dots, N_p\}$, $N \subseteq V$ pour tout $1 \dots p$ tel que :
 
 - Les sous-ensembles couvrant les sommets de $G$ : $\underset{i = 1 \dots p}{\cup} N_i = V$
-- Pour toute arête $vw \in E$, il existe un noeud $N_i$ tel que $v,w \in N_i$ (pour i donné)
+- Pour toute arête $vw \in E$, il existe un nœud $N_i$ tel que $v,w \in N_i$ (pour i donné)
 - Pour tout sommet $v \in V$, les noeuds $N_i$ et $N_j$ contenant $v$ forment un sous-arbre de $T$.
 
 **Definition :**  
-Graphe connexe : $G=(V,E)$ est connexe si pour tout $u,v \in V$, alors il existe un chemin etre $u$ et $v$ dans $G$
+Graphe connexe : $G=(V,E)$ est connexe si pour tout $u, v \in V$, alors il existe un chemin être $u$ et $v$ dans $G$
 
 La largeur arborescente de $T = -1 + \underset{i = 1 \dots p}{\max} |N_i| = 2$
 
 $v \space c (T_M, C \subseteq N_i)$ pour tous les sous-ensembles $C$ de $N$  
-= vetex cover min de $T_{N_i}$ avec la contriante que les sommets de $C$ sont dans le vertex cover. (les sommets qui ne sont pas dans $C$ ne sont pas dans le vertex cover)
+= Vertex Cover min de $T_{N_i}$ avec la contrainte que les sommets de $C$ sont dans le Vertex Cover. (les sommets qui ne sont pas dans $C$ ne sont pas dans le Vertex Cover)
