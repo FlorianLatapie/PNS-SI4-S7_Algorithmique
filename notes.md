@@ -354,8 +354,7 @@ On construit un Vertex Cover en prenant les 2 extrémités de chaque arête du c
 
 On note cet ensemble $V' \subseteq V$.  
 On montre que $V'$ est un Vertex Cover.  
-En effet, comme $C$ est un couplage maximal, alors chaque arête $e \in E$ a (au moins) une extrémité dans $V'$. 
-Par construction de $V'$
+En effet, comme $C$ est un couplage maximal, alors chaque arête $e \in E$ a (au moins) une extrémité dans $V'$. Par construction de $V'$
 
 Montrons que $|V'| \leq 2|V^\star|$ avec $V^\star$ un vertex de plus petite cardinalité.  
 Pour chaque arête de $C$, nécessairement une des deux extrémités (ou moins) doit être dans tout Vertex Cover.  

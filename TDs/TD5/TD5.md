@@ -7,7 +7,7 @@ Instance : Soient k tâches de durées respectives $t_1, ..., t_k$ (durées enti
 Question : Est-il possible d’exécuter les k tâches sur une machine à n processeurs en moins de $T$ unités de temps ?
 
 Prouver un algorithme polynomial qui est une 2-approximation de la version minimisation du problème Ordonnancement de tâches.  
-La version minimisation consiste à minimiser la durée totale d’exécution ($T$ n’est donc plus dans l’entrée du problème).
+La version minimisation consiste à minimiser la durée totale d’exécution ( $T$ n’est donc plus dans l’entrée du problème).
 
 ### Réponse exercice 1
 
