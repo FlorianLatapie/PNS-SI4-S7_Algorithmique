@@ -252,13 +252,6 @@ $$
 \end{align*}
 $$
 
-test temporaire : 
-$$
-bonjour
-$$
-
-// TODO : mettre le schéma
-
 $n$ variables et $p$ clauses
 
 $\exists$ une solution pour 3-SAT $\iff$ $\exists$ un vertex cover de $G$ de taille $n + 2p$
