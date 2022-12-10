@@ -2,8 +2,6 @@
 
 ---
 
-## 12/09/2022
-
 - mail du prof : dorian.mazauric@inria.fr
 - mail prof de td : bridoux@i3s.unice.fr
 
@@ -13,7 +11,7 @@
 
 ## Machine de Turing
 
-Machine de Turing est un modèle mathématique de calcul. Elle est composée d'une bande infinie de cellules, d'une tête de
+Une Machine de Turing est un modèle mathématique de calcul. Elle est composée d'une bande infinie de cellules, d'une tête de
 lecture et d'un état. La tête de lecture peut lire, écrire et se déplacer sur la bande. La machine de Turing est définie
 par un programme qui décrit les actions à effectuer en fonction de l'état et du symbole lu.
 
@@ -27,13 +25,13 @@ Composition d'une machine de Turing :
 - Chaque case contient un symbole d'un alphabet fini
 - Tetes de lecture/écriture permet de lire/écrire dans une case
 
-## Machine de Turing à K rubans
+## Machine de Turing à $K$ rubans
 
-- Q : ensemble fini d'états de la machine
-- T : alphabet de la machine, ensemble fini de symboles que l'on peut utiliser sur les bandes
-- I : sous-ensemble de l'ensemble de données
-- δ : fonction de transition $Q \times T^X \to Q \times (T \times \{G,D,S\})^K$
-- B : symbole blanc
+- $Q$ : ensemble fini d'états de la machine
+- $T$ : alphabet de la machine, ensemble fini de symboles que l'on peut utiliser sur les bandes
+- $I$ : sous-ensemble de l'ensemble de données
+- $\delta$ : fonction de transition $Q \times T^X \to Q \times (T \times \{G,D,S\})^K$
+- $B$ : symbole blanc
 - $q_0$ : état initial
 - $q_f$ : état final
 
@@ -49,18 +47,18 @@ ruban 2 : ... | B | B | B | B | B | ...$
 
 Temps de calcul d'une machine de Turing (MT), est une fonction de $T(n)$ avec n la taille des données
 
-T(n) nombre maximum de transitions pour une donnée de taille n
+$T(n)$ nombre maximum de transitions pour une donnée de taille n
 
 ## Théorème
 
-Si le langage `L` est accepté par une machine de Turing `T` à `k` bandes alors il existe une machine de Turing `T'` à 1
-bande qui reconnaît le même langage `L`.
+Si le langage $L$ est accepté par une machine de Turing $T$ à $k$ bandes alors il existe une machine de Turing $T'$ à 1
+bande qui reconnaît le même langage $L$.
 
 ### Théorème de l'accélération
 
-Si L est accepté par une machine de Turing à bande (`k>1`) en un temps `T(n)` (avec $\lim\limits_{x \to \infty} \frac{T(
-n)}{n} = +\infty$) alors pour toute constante réelle `c>0`, il existe une machine de Turing à `k` bandes acceptant `L`
-en un temps `c T(n)`
+Si $L$ est accepté par une machine de Turing à bande ($k>1$) en un temps $T(n)$ (avec $\lim\limits_{x \to \infty} \frac{T(
+n)}{n} = +\infty$ ) alors pour toute constante réelle $c>0$, il existe une machine de Turing à $k$ bandes acceptant $L$
+en un temps $c T(n)$
 
 ### Preuve
 
@@ -409,4 +407,3 @@ pour prouver que c'est np :
 ### Comme en TD : problème du plus long chemin
 
 On va montrer que le plus long chemin n'est pas approximable en temps polynomial
-
