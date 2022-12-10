@@ -61,9 +61,9 @@ en un temps $c T(n)$
 
 ### Preuve
 
-1. Nous encodons de la manière suivante les cases de Machine de Turing $\longrightarrow$ 1 case de Machine de Turing
+1. Nous encodons de la manière suivante les cases de MT $\longrightarrow$ 1 case de MT
 2. Ce codage permet plusieurs transitions à la fois.  
-   En effet, une lecture donne l'information de $n$ cases de MT.
+   En effet, une lecture donne l'information de $n$ cases de MT.  
    Donc, on peut effectuer tout le travail de ces $n$ lectures.
    Chaque phase de base de $MT' >= m$ transitions de $MT$
    Pour MT', on va lire 3 cases voisines ( $3^m$ cases dans MT)  
@@ -102,12 +102,12 @@ $P_1$ peut être réduit à $P_2$ s'il existe une transformation associant à ch
 $f(I_1$) de $P_2$ telle que :
 la réponse à $I_1$ est OUI si et seulement si la réponse à $f(I_1)$ est OUI
 
-$P_1$ : Chaine hamiltonienne
-Graphe G = (V,E) (liste d'adjacence)
+$P_1$ : Chaine hamiltonienne  
+Graphe $G = (V,E)$ (liste d'adjacence)  
 Est-ce qu'il existe une chaine qui permet de passer une fois et une seule par chaque sommet de G ?
 
-$P_2$ : Cycle hamiltonien
-Graphe G = (V,E) (liste d'adjacence)
+$P_2$ : Cycle hamiltonien  
+Graphe $G = (V,E)$ (liste d'adjacence)  
 Est-ce qu'il existe un cycle qui permet de passer une fois et une seule par chaque sommet de G ?
 
 Nous montrons que G admet une chaine hamiltonienne si et seulement si G' admet un cycle hamiltonien
