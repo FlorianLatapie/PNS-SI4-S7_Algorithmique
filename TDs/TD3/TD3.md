@@ -14,11 +14,11 @@ Montrer que Somme de Sous-Ensembles est dans NP en décrivant une machine de Tur
   On fait une machine de Turing à 3 états, on prend l'élément et on ne prend pas l'élément, ainsi que l'état initial.
   À chaque élément de $e$ on fait respectivement les deux choix. Si sur le deuxième on a 0 la réponse est oui.
 
-  ```mermaid
-  graph LR
-    a(( )) --> | je choisis e | b(( ))
-    a(( )) --> | je ne choisis pas e | c(( ))
-  ```
+```mermaid
+graph LR
+a(( )) --> | je choisis e | b(( ))
+a(( )) --> | je ne choisis pas e | c(( ))
+```
 
 - Algorithme de vérification d'une solution en temps polynomial.  
   Somme des éléments en entrée d'une taille $n$, complexité en temps $O(n)$
