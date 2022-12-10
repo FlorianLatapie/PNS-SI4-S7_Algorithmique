@@ -104,17 +104,17 @@ la réponse à $I_1$ est OUI si et seulement si la réponse à $f(I_1)$ est OUI
 
 $P_1$ : Chaine hamiltonienne  
 Graphe $G = (V,E)$ (liste d'adjacence)  
-Est-ce qu'il existe une chaine qui permet de passer une fois et une seule par chaque sommet de G ?
+Est-ce qu'il existe une chaine qui permet de passer une fois et une seule par chaque sommet de $G$ ?
 
 $P_2$ : Cycle hamiltonien  
 Graphe $G = (V,E)$ (liste d'adjacence)  
-Est-ce qu'il existe un cycle qui permet de passer une fois et une seule par chaque sommet de G ?
+Est-ce qu'il existe un cycle qui permet de passer une fois et une seule par chaque sommet de $G$ ?
 
-Nous montrons que G admet une chaine hamiltonienne si et seulement si G' admet un cycle hamiltonien
+Nous montrons que $G$ admet une chaine hamiltonienne si et seulement si $G'$ admet un cycle hamiltonien
 
 $\Leftarrow$ : considérons un cycle hamiltonien de $G$ : "moins $x_0$" alors on obtient une chaine hamiltonienne de $G$
 
-$\Rightarrow$ : Si G admet une chaine hamiltonienne, alors on ajoute 2 arêtes des extrémités de la chaine vers $x_0$
+$\Rightarrow$ : Si $G$ admet une chaine hamiltonienne, alors on ajoute 2 arêtes des extrémités de la chaine vers $x_0$
 et on obtient un cycle hamiltonien dans $G'$ avec $x_0$
 
 Finalement, $p_1$ $\leq$ $p_2$
@@ -123,7 +123,7 @@ Finalement, $p_1$ $\leq$ $p_2$
 
 ## Classique en DS
 
-TD2 : exo4 variante ${a_k, b_k}$  
+TD2 : Exercice 4 : variante ${a_k, b_k}$  
 et vérifier la parité d'un nombre
 
 ---
@@ -132,7 +132,8 @@ et vérifier la parité d'un nombre
 
 ## P et NP
 
-**Définition** : P est la classe des problèmes qu'il est possible de résoudre en temps *polynomial* avec une machine de
+**Définition :**  
+P est la classe des problèmes qu'il est possible de résoudre en temps *polynomial* avec une machine de
 Turing *déterministe*.
 
 Cette machine est non déterministe :
@@ -145,8 +146,8 @@ graph LR
 
 Plusieurs transitions à partir d'un même état.
 
-**Définition** : NP (Nondeterministic Polynomial) non déterministe polynomial est la classe de problèmes qu'il est
-possible de résoudre en un temps polynomial avec une machine de Turing non déterministe.
+**Définition** :  
+NP (Nondeterministic Polynomial) non déterministe polynomial est la classe de problèmes qu'il est possible de résoudre en un temps polynomial avec une machine de Turing non déterministe.
 
 Exemple :
 
@@ -226,7 +227,7 @@ $a_{k+2} = S + B$
 
 ## Vertex Cover
 
-**Definition :**  
+**Définition :**  
 Un Vertex Cover d'un graphe $G = (V,E)$ est un sous-ensemble $V \subseteq V$ qui inclut au moins une extrémité de chaque arête de $G$ : $V' \subseteq V$ tel que $\forall \{u,v\} \in E$, on a $\{u,v\} \cap V' \neq \emptyset$
 
 - Vertex cover
@@ -338,7 +339,7 @@ $G = (V, E)$
 
 **Principe de l'algorithme :** calculer un couplage maximal (par inclusion)
 
-**Definition :**  
+**Définition :**  
 **Couplage** étant donné un graphe $G = (V, E)$, un couplage est un ensemble d'arêtes $E' \subseteq E$ deux à deux disjointes. (Autrement dit ; tout sommet de $V$ est une extrémité d'au plus 1 arrête de $E'$)
 
 $E = \{e_1, e_2, \dots, e_n\}$
@@ -368,7 +369,7 @@ Décomposition de $G$ en arbre (décomposition arborescente) est un arbre $T(N,A
 - Pour toute arête $vw \in E$, il existe un nœud $N_i$ tel que $v,w \in N_i$ (pour i donné)
 - Pour tout sommet $v \in V$, les noeuds $N_i$ et $N_j$ contenant $v$ forment un sous-arbre de $T$.
 
-**Definition :**  
+**Définition :**  
 Graphe connexe : $G=(V,E)$ est connexe si pour tout $u, v \in V$, alors il existe un chemin être $u$ et $v$ dans $G$
 
 La largeur arborescente de $T = -1 + \underset{i = 1 \dots p}{\max} |N_i| = 2$
