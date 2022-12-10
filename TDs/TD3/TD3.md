@@ -11,7 +11,7 @@ Montrer que Somme de Sous-Ensembles est dans NP en décrivant une machine de Tur
 ### Réponse exercice 1
 
 - Machine de Turing non déterministe.  
-  On fait une machine de Turing à 3 états, on prend l'élément et on ne prend pas l'élément, ainsi que l'état initial.
+  On fait une machine de Turing à 3 états, on prend l'élément et on ne prend pas l'élément, ainsi que l'état initial.  
   À chaque élément de $e$ on fait respectivement les deux choix. Si sur le deuxième on a 0 la réponse est oui.
 
 ```mermaid
@@ -132,32 +132,32 @@ $\Rightarrow$ Réduction en temps polynomial
 
 6. **Circuit Hamiltonien $\propto$ cycle Hamiltonien**  
 
-    Non valide :
+Non valide :
 
-    ```mermaid
-    graph LR
-        a(( )) --> b(( ))
-        a(( )) --> c
-        c(( )) --> b
-    ```
+```mermaid
+graph LR
+    a(( )) --> b(( ))
+    a(( )) --> c
+    c(( )) --> b
+```
 
-    Valide :
+Valide :
 
-    ```mermaid
-    graph LR 
-        a(( )) --- b(( ))
-        a(( )) --- c
-        c(( )) --- b
-    ```
+```mermaid
+graph LR 
+    a(( )) --- b(( ))
+    a(( )) --- c
+    c(( )) --- b
+```
 
-    Si on a un circuit alors il y a forcément un cycle :
+Si on a un circuit alors il y a forcément un cycle :
 
-    ![image](./r%C3%A9ponse%202.6.jpg)
+![image](./r%C3%A9ponse%202.6.jpg)
 
-    Transformation d'un graphe dirigé en un graphe non dirigé :
+Transformation d'un graphe dirigé en un graphe non dirigé :
 
-    - On transforme chaque nœud du problème initial en 3 nœuds : un qui gère les entrées, un qui gère les sorties et un dernier au milieu reliant les deux précédents. Ce dernier nœud permet de bien vérifier une entrée puis une sortie.
-    - La transformation est polynomiale.
+- On transforme chaque nœud du problème initial en 3 nœuds : un qui gère les entrées, un qui gère les sorties et un dernier au milieu reliant les deux précédents. Ce dernier nœud permet de bien vérifier une entrée puis une sortie.
+- La transformation est polynomiale.
 
 7. **Circuit Hamiltonien $\propto$ chemin Hamiltonien**  
     Deux possibilités :
