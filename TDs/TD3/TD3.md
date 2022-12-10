@@ -363,7 +363,7 @@ $$
 $$
 \begin{align*}
 \text{3-Partition (B)} &\Rightarrow \text{B', B'' et B'''} = \{s\} \text{ car }\sum_{b \in B} = 3S\\
-&\Rightarrow \text{B', B'' est une partition équilibrée de B\textbackslash\{s\} = A}\\
+&\Rightarrow \text{B', B'' est une partition équilibrée de B} \textbackslash \text{\{s\} = A}\\
 &\Rightarrow \text{A' = B' et A'' = B'' est une partition de A } (\sum_{a \in A'}a = \sum_{a \in A''})\\
 &\Rightarrow \text{Partition (A)}\\
 \end{align*}
