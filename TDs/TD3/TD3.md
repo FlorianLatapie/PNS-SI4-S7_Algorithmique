@@ -384,7 +384,7 @@ $A = \{a_1, a_2, \dots, a_k\} \xrightarrow[\text{Transformation polynomiale}]{} 
   En effet, par construction et par hypothèse :  
   $\sum_{a \in A'}a = \sum_{a \in A \backslash A'}a = \{a_{k+1}\}$
 
-- $\Leftarrow$ On suppose une solution pour 3-Partition : $B_1$, $B2$ et $B_3$ avec $B \cup B_2 \cup B_3 = B$ et $B_i \cap B_j = \emptyset $ $(i,j) = (1,2), (1,3), (2,3)$
+- $\Leftarrow$ On suppose une solution pour 3-Partition : $B_1$, $B2$ et $B_3$ avec $B \cup B_2 \cup B_3 = B$ et $B_i \cap B_j = \emptyset$ $(i,j) = (1,2), (1,3), (2,3)$
 
 On $\sum_{b_1 \in B_1}b_1 = \sum_{b_2 \in B_2}b_2 = \sum_{b_3 \in B_3}b_3$
 
