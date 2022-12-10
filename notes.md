@@ -152,7 +152,7 @@ NP (Nondeterministic Polynomial) non déterministe polynomial est la classe de p
 Exemple :
 
 - **Nom :** Partition
-- **Entrée :** un ensemble A non négatif (écrit en base $k => 2$)
+- **Entrée :** un ensemble $A$ non négatif (écrit en base $k => 2$)
 - **Question :** Est-ce qu'il existe un sous ensemble $A_1 <= A$ tel que $\sum_{a \in A_1} a = \sum_{a' \in A \backslash A_1} a'$
 
 ```mermaid
@@ -184,15 +184,15 @@ On peut vérifier une solution en temps polynomial.
 
 ##  3DM
 
-- 3DM
-- Entrée :  
+- **Nom :** 3DM
+- **Entrée :**  
   $X = \{x_1, x_2, ..., x_t\}$, $t = |X| = |Y| = |Z|$  
   $Y = \{y_1, y_2, ..., y_t\}$  
   $Z = \{z_1, z_2, ..., z_t\}$
 
   $M$ un ensemble de triplets dans $X \times Y \times Z$  
   Un triplet (x,y,z) avec $x \in X$, $y \in Y$, $z \in Z$
-- Question : Existe-t-il $M' \subseteq M$ tel que $|M'| = t$ et $U_{i=1}^{t} \{n_i\} = X \times Y \times Z$ avec $M = \{n_1, n_2, ..., n_t\}$
+- **Question :** Existe-t-il $M' \subseteq M$ tel que $|M'| = t$ et $U_{i=1}^{t} \{n_i\} = X \times Y \times Z$ avec $M = \{n_1, n_2, ..., n_t\}$
 
 3DM $\propto$ Partition
 
@@ -229,9 +229,9 @@ $a_{k+2} = S + B$
 **Définition :**  
 Un Vertex Cover d'un graphe $G = (V,E)$ est un sous-ensemble $V \subseteq V$ qui inclut au moins une extrémité de chaque arête de $G$ : $V' \subseteq V$ tel que $\forall \{u,v\} \in E$, on a $\{u,v\} \cap V' \neq \emptyset$
 
-- Vertex cover
-- Entrées : Un graphe $G = (V,E)$ (représenté par sa liste d'adjacence), un entier $k \in \mathbb{N}$
-- Question : Existe-t-il un Vertex Cover de taille au plus $k$ ?
+- **Nom :** Vertex cover
+- **Entrées :** Un graphe $G = (V,E)$ (représenté par sa liste d'adjacence), un entier $k \in \mathbb{N}$
+- **Question :** Existe-t-il un Vertex Cover de taille au plus $k$ ?
 
 Comment montrer que Vertex Cover est NP-Complet ?
 
@@ -241,6 +241,7 @@ Comment montrer que Vertex Cover est NP-Complet ?
 ## 3-Sat
 
 Exemple :
+
 $$
 \begin{align*}
 \phi = &\phantom{}&(x_1 \lor \lnot  x_2 \lor \lnot x_3)  \\
@@ -249,6 +250,11 @@ $$
 &\land &(x_2 \lor x_4 \lor \lnot x_5)  \\
 &\land &(\lnot x_3 \lor \lnot x_4 \lor x_5)
 \end{align*}
+$$
+
+test temporaire : 
+$$
+bonjour
 $$
 
 // TODO : mettre le schéma
