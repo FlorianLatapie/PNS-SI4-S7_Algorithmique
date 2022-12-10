@@ -379,7 +379,7 @@ $v \space c (T_M, C \subseteq N_i)$ pour tous les sous-ensembles $C$ de $N$
 
 ### Infos sur l'oral de l'aprem
 
-Objectif : apporter des points  
+**Objectif :** apporter des points  
 5 minutes de préparation, 1.30 min d'oral  
 Si c'est une machine de turing on demande que les grandes lignes, pas besoin de détails.  
 Montrer dans les grandes lignes qu'on a compris  
@@ -387,20 +387,21 @@ Si on a pas compris comment faire une reduction c'est mort
 
 ### Rappels
 
-le non déterminisme c'est qu'a un état on peut avoir plusieurs transitions possibles
+Le non déterminisme c'est qu'a un état on peut avoir plusieurs transitions possibles
 
-p est contenu dans np
+P est contenu dans NP
 
-montrer que c'est dans np et np-difficile (ca a l'aide d'une réduction polynomiale)
+Montrer que c'est dans NP et NP-difficile (cela a l'aide d'une réduction polynomiale)
 
-montrer que le problème à droite est au moins aussi difficile qu'un problème a gauche qu'on connait  
-ca démontre qu'un problème np diffile est aussi dur que nous
+Montrer que le problème à droite est au moins aussi difficile qu'un problème a gauche qu'on connait  
+Cela démontre qu'un problème NP-diffile est aussi dur que nous
 
-comment on montre qu'un problème est np difficile, on le montre avec une transformation polynomiale  
+Comment on montre qu'un problème est np difficile ? On le montre avec une transformation polynomiale  
 
-pour prouver que c'est np :  
-1/2 : avec une machine de turing non déterministe  
-2/2 : une vérifier que c'est possible en temps polynomial (pas prouver, vérifier : dire que c'est possible)  
+Pour prouver que c'est NP :
+
+- Soit avec une machine de turing non déterministe  
+- Soit une vérifier que c'est possible en temps polynomial (pas prouver, vérifier : dire que c'est possible)  
 
 ### Comme en TD : problème du plus long chemin
 
