@@ -380,7 +380,7 @@ $v \space c (T_M, C \subseteq N_i)$ pour tous les sous-ensembles $C$ de $N$
 ### Infos sur l'oral de l'aprem
 
 **Objectif :** apporter des points  
-5 minutes de préparation, 1.30 min d'oral  
+5 minutes de préparation, 1:30 min d'oral  
 Si c'est une machine de turing on demande que les grandes lignes, pas besoin de détails.  
 Montrer dans les grandes lignes qu'on a compris  
 Si on a pas compris comment faire une reduction c'est mort

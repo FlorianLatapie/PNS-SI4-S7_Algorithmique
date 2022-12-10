@@ -1,6 +1,6 @@
 # PNS-SI4-S7_Algorithmique
 
-## [Cours](./notes.md)
+## [Cours](./cours.md)
 
 ## TDs
 
