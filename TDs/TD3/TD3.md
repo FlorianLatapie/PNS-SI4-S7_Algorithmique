@@ -459,7 +459,7 @@ $$
 
 $$
 \begin{align*}
-&\text{Soient les variables }x_1,\dots, x_n &\rightarrow &\text{On construit les }a_i (i = 1, \dots, n) \text{ composés de } n+m chiffres: \\
+&\text{Soient les variables }x_1,\dots, x_n &\rightarrow &\text{On construit les }a_i (i = 1, \dots, n) \text{ composés de } n+m \space chiffres: \\
 &\text{Soient les clauses }C_1, \dots, C_m &\phantom{} & \text{- le } j^{ème} \text{vaut 1 si } x_i \in C_j\\
 &\phantom{} &\phantom{} & \text{- le } (m+i)^{ème} \text{chiffre vaut 1}\\
 &\phantom{} &\phantom{} & \text{- les autres chiffres valent 0}\\
