@@ -61,17 +61,17 @@ en un temps $c T(n)$
 
 ### Preuve
 
-1. Nous encodons de la manière suivante les cases de MT $\longrightarrow$ 1 case de MT
-2. Ce codage permet plusieurs transitions à la fois.
-   En effet, une lecture donne l'information de `n` cases de MT.
-   Donc, on peut effectuer tout le travail de ces `n` lectures.
-   Chaque phase de base de `MT' >= m` transitions de `MT`
+1. Nous encodons de la manière suivante les cases de Machine de Turing $\longrightarrow$ 1 case de Machine de Turing
+2. Ce codage permet plusieurs transitions à la fois.  
+   En effet, une lecture donne l'information de $n$ cases de MT.
+   Donc, on peut effectuer tout le travail de ces $n$ lectures.
+   Chaque phase de base de $MT' >= m$ transitions de $MT$
    Pour MT', on va lire 3 cases voisines ( $3^m$ cases dans MT)  
    $T'(n) < 2n + \frac{8T(n)}{m}$  
-   Il faut choisir `m` pour que $T'(n) \leq c T(n)$  
+   Il faut choisir $m$ pour que $T'(n) \leq c T(n)$  
    $m > \frac{16}{c}$  
    $\Rightarrow \frac{8T(n)}{m} < \frac{c}{2}n < c T(n) - 2n$  
-   pour `n` suffisamment grand.
+   pour $n$ suffisamment grand.
 
 ---
 
