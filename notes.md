@@ -60,7 +60,8 @@ Si $L$ est accepté par une machine de Turing à bande ( $k>1$ ) en un temps $T(
 n)}{n} = +\infty$ ) alors pour toute constante réelle $c>0$, il existe une machine de Turing à $k$ bandes acceptant $L$
 en un temps $c T(n)$
 
-test temporaire : $\lim$
+test temporaire : $\lim\limits_{x \to \infty} \frac{T(
+n)}{n} = +\infty$
 
 ### Preuve
 
