@@ -85,14 +85,14 @@ en un temps $c T(n)$
 
 ### Exemple
 
-- Nom : Sac a dos (Knapsack)
-- Données :
+- **Nom :** Sac a dos (Knapsack)
+- **Données :**
   - ensemble fini d'objets $E$
   - une fonction entière $v$ qui associe une valeur à chaque objet
   - une fonction entière $p$ qui associe un poids à chaque objet
   - un poids total $P$
   - une valeur totale minimale $V$
-- Question : pouvons-nous choisir des objets de manière à ne pas dépasser le poids total $P$ et à avoir une valeur
+- **Question :** pouvons-nous choisir des objets de manière à ne pas dépasser le poids total $P$ et à avoir une valeur
   totale au moins $V$ ?
 
 *Réduction polynomiale :*
@@ -133,7 +133,7 @@ et vérifier la parité d'un nombre
 ## P et NP
 
 **Définition :**  
-P est la classe des problèmes qu'il est possible de résoudre en temps *polynomial* avec une machine de
+P (Polynomial) est la classe des problèmes qu'il est possible de résoudre en temps *polynomial* avec une machine de
 Turing *déterministe*.
 
 Cette machine est non déterministe :
@@ -151,10 +151,9 @@ NP (Nondeterministic Polynomial) non déterministe polynomial est la classe de p
 
 Exemple :
 
-- Partition
-- Entrée : un ensemble A non négatif (écrit en base $k => 2$)
-- Question : Est-ce qu'il existe un sous ensemble $A_1 <= A$ tel que $\sum_{a \in A_1} a = \sum_{a' \in A \backslash
-  A_1} a'$
+- **Nom :** Partition
+- **Entrée :** un ensemble A non négatif (écrit en base $k => 2$)
+- **Question :** Est-ce qu'il existe un sous ensemble $A_1 <= A$ tel que $\sum_{a \in A_1} a = \sum_{a' \in A \backslash A_1} a'$
 
 ```mermaid
 graph LR
