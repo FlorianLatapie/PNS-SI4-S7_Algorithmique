@@ -49,7 +49,7 @@ Complexité : $O(n)$
 
 ## Exercice 3
 
-Nom : **Sac à dos**
+Nom : **Sac à dos**  
 Instance : Une liste d’objets $X$, une valeur $v(x)$ pour tout $x$ de $X$, un poids $p(x)$ pour tout $x$ de $X$, deux entiers non-négatifs $V$ et $P$.  
 Question : existe-t-il un sous-ensemble $X’$ de $X$ tel que la somme des valeurs des éléments de $X’$ est au moins $V$ et la somme des poids des éléments de $X’$ est au plus $P$ ?  
 
