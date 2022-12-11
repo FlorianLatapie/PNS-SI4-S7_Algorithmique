@@ -5,7 +5,7 @@ output:
 ---
 # Algorithmes et complexité (2022-2023)
 
-*Florian Bridoux, François Doré, Dorian Mozauric*.
+*Florian Bridoux, François Doré, Dorian Mazauric*.
 
 ## Partiel du 24 octobre 2022 (durée une heure, aucun document autorisé)
 
