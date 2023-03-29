@@ -55,11 +55,13 @@ graph TD
 ```
 
 Calcul de la complexité :
+
 $$
 \sum_{i=0}^{n} i = \frac{n(n+1)}{2} = O(n^2)
 $$
 
 Demo :
+
 $$
 \left.
     \begin{align*}
