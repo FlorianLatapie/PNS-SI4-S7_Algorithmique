@@ -62,7 +62,7 @@ $$
 
 Demo :
 
-$$
+```math
 \left.
     \begin{align*}
         1 + n &= n+1\\
@@ -73,7 +73,7 @@ $$
     \end{align*}
 \right \}
 n\text{ fois}
-$$
+```
 
 Donc $\sum_{i=0}^{n} i = \frac{n(n+1)}{2}$ (/2 car on a pris 2 fois la suite dans la demo)
 
